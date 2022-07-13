@@ -1,0 +1,17 @@
+{
+  "name": "@minteeble/utils",
+  "version": "1.0.1",
+  "description": "Minteeble utils package",
+  "repository": "https://github.com/minteeble/utils.git",
+  "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
+}
