@@ -5,7 +5,9 @@
   "repository": "https://github.com/minteeble/utils.git",
   "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "typescript-json-serializer": "^4.2.0"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
