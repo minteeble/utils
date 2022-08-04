@@ -5,6 +5,7 @@ export interface IAccesssConditionResult {
   authorized: boolean;
   contractAddress: string;
   balance: number;
+  items: Array<any>;
 }
 
 @JsonObject()
@@ -20,6 +21,9 @@ export class AccesssConditionResult
 
   @JsonProperty({ required: true })
   balance: number;
+
+  @JsonProperty({ required: true })
+  items: Array<any>;
 
   constructor() {
     super();
