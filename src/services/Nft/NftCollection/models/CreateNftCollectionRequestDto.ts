@@ -1,7 +1,12 @@
 import { BaseModel, IBaseModel } from "../../../../shared";
+import {
+  INftCollectionInfoClientModel,
+  NftCollectionInfoClientModel,
+} from "../../shared";
 
-export interface ICreateNftCollectionRequestDto extends IBaseModel {}
+export interface ICreateNftCollectionRequestDto
+  extends INftCollectionInfoClientModel {}
 
 export class CreateNftCollectionRequestDto
-  extends BaseModel
+  extends NftCollectionInfoClientModel
   implements ICreateNftCollectionRequestDto {}
