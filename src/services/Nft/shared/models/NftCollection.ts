@@ -1,7 +1,13 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { BaseModel, IBaseModel } from "../../../../shared";
+import {
+  BaseModel,
+  IBaseModel,
+  ISingleOwnableClientModel,
+  SingleOwnableClientModel,
+} from "../../../../shared";
 
-export interface INftCollectionInfoClientModel extends IBaseModel {
+export interface INftCollectionInfoClientModel
+  extends ISingleOwnableClientModel {
   /**
    * Chain name such as rinkeby, mainnet, etc
    */
@@ -25,7 +31,7 @@ export interface INftCollectionInfoClientModel extends IBaseModel {
 
 @JsonObject()
 export class NftCollectionInfoClientModel
-  extends BaseModel
+  extends SingleOwnableClientModel
   implements INftCollectionInfoClientModel
 {
   @JsonProperty()
