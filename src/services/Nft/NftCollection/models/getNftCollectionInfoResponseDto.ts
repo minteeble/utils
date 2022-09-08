@@ -1,3 +1,4 @@
+import { JsonObject } from "typescript-json-serializer";
 import {
   INftCollectionInfoClientModel,
   NftCollectionInfoClientModel,
@@ -6,6 +7,7 @@ import {
 export interface IGetNftCollectionInfoResponseDto
   extends INftCollectionInfoClientModel {}
 
+@JsonObject()
 export class GetNftCollectionInfoResponseDto
   extends NftCollectionInfoClientModel
   implements IGetNftCollectionInfoResponseDto {}
