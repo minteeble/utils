@@ -6,17 +6,22 @@ import {
   SingleOwnableClientModel,
 } from "../../../../shared";
 
-export interface IGetNftCollectionInfoRequestDto
-  extends ISingleOwnableClientModel {
+export interface INftCollectionInfoPreview extends ISingleOwnableClientModel {
+  /**
+   * Chain name such as rinkeby, mainnet, etc
+   */
   chainName: string;
 
+  /**
+   * Collection address
+   */
   address: string;
 }
 
 @JsonObject()
-export class GetNftCollectionInfoRequestDto
+export class NftCollectionInfoPreview
   extends SingleOwnableClientModel
-  implements IGetNftCollectionInfoRequestDto
+  implements INftCollectionInfoPreview
 {
   @JsonProperty()
   chainName: string;
