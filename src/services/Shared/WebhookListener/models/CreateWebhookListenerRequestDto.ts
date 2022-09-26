@@ -2,14 +2,14 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { BaseModel, IBaseModel } from "../../../../shared";
 import { IRequestDto } from "../../../../shared/models/RequestDto";
 
-export interface ICreateWebhookListenerRequestDto extends IRequestDto {
+export interface ICreateWebhookListenerRequestDto {
   name: string;
 }
 
 @JsonObject()
 export class CreateWebhookListenerRequestDto
   extends BaseModel
-  implements ICreateWebhookListenerRequestDto
+  implements IRequestDto, ICreateWebhookListenerRequestDto
 {
   isValid(): boolean {
     let returnValue = true;
