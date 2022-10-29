@@ -9,9 +9,7 @@ import {
 export interface IGetNftCollectionInfoRequestDto extends IBaseModel {
   chainName: string;
 
-  address: string;
-
-  user: string;
+  collectionId: string;
 }
 
 @JsonObject()
@@ -23,8 +21,5 @@ export class GetNftCollectionInfoRequestDto
   chainName: string;
 
   @JsonProperty()
-  address: string;
-
-  @JsonProperty()
-  user: string;
+  collectionId: string;
 }
