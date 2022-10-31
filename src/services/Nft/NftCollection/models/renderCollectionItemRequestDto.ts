@@ -26,7 +26,7 @@ export interface IRenderCollectionItemRequestDto extends IBaseModel {
   /**
    * Requested file name (eg. 3.png, 759.json, etc.)
    */
-  requestedFileName: string;
+  requestedFilename: string;
 }
 
 /**
@@ -44,5 +44,5 @@ export class RenderCollectionItemRequestDto
   fileType: CollectionRenderFileType;
 
   @JsonProperty()
-  requestedFileName: string;
+  requestedFilename: string;
 }
