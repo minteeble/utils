@@ -3,6 +3,7 @@ import {
   BaseModel,
   IBaseModel,
   ISingleOwnableClientModel,
+  RequestDto,
   SingleOwnableClientModel,
 } from "../../../../shared";
 
@@ -19,7 +20,7 @@ export interface IGetNftCollectionInfoRequestDto extends IBaseModel {
 
 @JsonObject()
 export class GetNftCollectionInfoRequestDto
-  extends BaseModel
+  extends RequestDto
   implements IGetNftCollectionInfoRequestDto
 {
   @JsonProperty()
