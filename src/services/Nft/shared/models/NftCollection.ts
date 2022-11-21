@@ -27,6 +27,11 @@ export interface INftCollectionInfoClientModel
    * Collection type
    */
   type: string;
+
+  /**
+   * Collection ABI info
+   */
+  abi: any;
 }
 
 @JsonObject()
@@ -45,4 +50,7 @@ export class NftCollectionInfoClientModel
 
   @JsonProperty()
   type: string;
+
+  @JsonProperty()
+  abi: any;
 }

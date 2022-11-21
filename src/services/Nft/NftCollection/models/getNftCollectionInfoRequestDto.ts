@@ -3,28 +3,38 @@ import {
   BaseModel,
   IBaseModel,
   ISingleOwnableClientModel,
+  RequestDto,
   SingleOwnableClientModel,
 } from "../../../../shared";
 
 export interface IGetNftCollectionInfoRequestDto extends IBaseModel {
   chainName: string;
 
-  address: string;
+  collectionId: string;
 
-  user: string;
+  /**
+   * Specifies if ABI has to be fetched or not.
+   */
+  fetchAbi?: string;
 }
 
 @JsonObject()
 export class GetNftCollectionInfoRequestDto
-  extends BaseModel
+  extends RequestDto
   implements IGetNftCollectionInfoRequestDto
 {
   @JsonProperty()
   chainName: string;
 
   @JsonProperty()
-  address: string;
+  collectionId: string;
 
   @JsonProperty()
-  user: string;
+  fetchAbi?: string;
+
+  constructor() {
+    super();
+
+    this.fetchAbi = "0";
+  }
 }
