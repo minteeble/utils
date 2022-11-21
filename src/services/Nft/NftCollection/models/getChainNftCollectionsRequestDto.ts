@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { IBaseModel, BaseModel } from "../../../../shared";
+import { IBaseModel, BaseModel, RequestDto } from "../../../../shared";
 
 export interface IGetChainNftCollectionsRequestDto extends IBaseModel {
   chainName: string;
@@ -7,7 +7,7 @@ export interface IGetChainNftCollectionsRequestDto extends IBaseModel {
 
 @JsonObject()
 export class GetChainNftCollectionsRequestDto
-  extends BaseModel
+  extends RequestDto
   implements IGetChainNftCollectionsRequestDto
 {
   @JsonProperty()
