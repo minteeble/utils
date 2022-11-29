@@ -18,6 +18,11 @@ export interface INftCollectionInfoClientModel
    */
   collectionName: string;
 
+    /**
+   * ID assigned to the collection
+   */
+     collectionId: string;
+
   /**
    * Collection address
    */
@@ -44,6 +49,9 @@ export class NftCollectionInfoClientModel
 
   @JsonProperty()
   collectionName: string;
+
+  @JsonProperty()
+  collectionId: string;
 
   @JsonProperty()
   address: string;
