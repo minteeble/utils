@@ -30,6 +30,11 @@ export interface ICreateNftCollectionRequestDto extends IBaseModel {
    * Collection ABI info
    */
   ABI: any;
+
+  /**
+   * Resource Owner
+   */
+  resourceOwner: string;
 }
 
 @JsonObject()
@@ -51,4 +56,7 @@ export class CreateNftCollectionRequestDto
 
   @JsonProperty()
   ABI: any;
+
+  @JsonProperty()
+  resourceOwner: string;
 }
