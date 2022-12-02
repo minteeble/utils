@@ -7,3 +7,4 @@ export * from "./models/getChainNftCollectionsRequestDto";
 export * from "./models/getChainNftCollectionsResponseDto";
 export * from "./models/renderCollectionItemRequestDto";
 export * from "./models/deleteUserNftCollectionRequestDto";
+export * from "./models/setCustomABIRequestDto";
