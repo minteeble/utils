@@ -19,6 +19,11 @@ export interface INftCollectionInfoClientModel
   collectionName: string;
 
   /**
+   * ID assigned to the collection
+   */
+  collectionId: string;
+
+  /**
    * Collection address
    */
   address: string;
@@ -31,7 +36,12 @@ export interface INftCollectionInfoClientModel
   /**
    * Collection ABI info
    */
-  abi: any;
+  ABI: any;
+
+  /**
+   * Resource Owner
+   */
+  resourceOwner: string;
 }
 
 @JsonObject()
@@ -46,11 +56,17 @@ export class NftCollectionInfoClientModel
   collectionName: string;
 
   @JsonProperty()
+  collectionId: string;
+
+  @JsonProperty()
   address: string;
 
   @JsonProperty()
   type: string;
 
   @JsonProperty()
-  abi: any;
+  ABI: any;
+
+  @JsonProperty()
+  resourceOwner: string;
 }
