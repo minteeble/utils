@@ -32,4 +32,30 @@ export class NetworkUtils {
   public static getMainnetNetworks(): Array<NetworkModel> {
     return this.getAllNetworks().filter((network) => !network.isTestnet);
   }
+
+  /**
+   * Gets network object by specifying its urlName
+   *
+   * @param urlName Network url name
+   * @returns Network model if exists, null otherwise
+   */
+  public static getNetworkByUrlname(urlName: string): NetworkModel | null {
+    return (
+      this.getAllNetworks().find((network) => network.urlName === urlName) ||
+      null
+    );
+  }
+
+  /**
+   * Gets network object by specifying its chainId
+   *
+   * @param chainId Newtork chain ID
+   * @returns Network model if exists, null otherwise
+   */
+  public static getNetworkByChainId(chainId: number): NetworkModel | null {
+    return (
+      this.getAllNetworks().find((network) => network.chainId === chainId) ||
+      null
+    );
+  }
 }

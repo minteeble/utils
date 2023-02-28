@@ -19,7 +19,7 @@ let networks: Array<INetworkModel> = [
     chainId: 56,
     name: "Binance Smart Chain Mainnet",
     currency: "BNB",
-    urlName: "goerli",
+    urlName: "bsc",
     isTestnet: false,
   },
   {
