@@ -4,6 +4,9 @@ import { IBaseModel, BaseModel } from "../../../../shared";
 export enum SmartContractType {
   GENERIC = "GENERIC",
   ERC721 = "ERC721",
+  ERC1155 = "ERC1155",
+  MINTEEBLE_ERC721 = "MINTEEBLE_ERC721",
+  MINTEEBLE_ERC1155 = "MINTEEBLE_ERC1155",
 }
 
 /**

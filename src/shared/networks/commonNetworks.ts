@@ -7,6 +7,7 @@ let networks: Array<INetworkModel> = [
     currency: "ETH",
     urlName: "Mainnet",
     isTestnet: false,
+    explorerUrlPattern: "https:/etherscan.io/address/{address}",
   },
   {
     chainId: 5,
@@ -14,6 +15,7 @@ let networks: Array<INetworkModel> = [
     currency: "ETH",
     urlName: "goerli",
     isTestnet: true,
+    explorerUrlPattern: "https://goerli.etherscan.io/address/{address}",
   },
   {
     chainId: 56,
@@ -21,6 +23,7 @@ let networks: Array<INetworkModel> = [
     currency: "BNB",
     urlName: "bsc",
     isTestnet: false,
+    explorerUrlPattern: "https://bscscan.io/address/{address}",
   },
   {
     chainId: 97,
@@ -28,6 +31,7 @@ let networks: Array<INetworkModel> = [
     currency: "tBNB",
     urlName: "goerli",
     isTestnet: true,
+    explorerUrlPattern: "https://testnet.bscscan.io/address/{address}",
   },
 ];
 

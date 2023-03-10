@@ -29,6 +29,11 @@ export interface INetworkModel extends IBaseModel {
    * Specifies if the network is testnet or not
    */
   isTestnet: boolean;
+
+  /**
+   * Url pattern representing the address page in the block explorer
+   */
+  explorerUrlPattern: string;
 }
 
 /**
@@ -50,6 +55,9 @@ export class NetworkModel extends BaseModel implements INetworkModel {
 
   @JsonProperty()
   isTestnet: boolean;
+
+  @JsonProperty()
+  explorerUrlPattern: string;
 
   constructor() {
     super();

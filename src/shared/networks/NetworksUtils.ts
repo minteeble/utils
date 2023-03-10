@@ -58,4 +58,22 @@ export class NetworkUtils {
       null
     );
   }
+
+  /**
+   * Builds the block explorer url for the specified address
+   *
+   * @param urlName Network url name (Chain name)
+   * @param address Address of the account
+   * @returns Blockexplorer url
+   */
+  public static getAddressUrl(urlName: string, address: string): string {
+    let network = this.getNetworkByUrlname(urlName);
+    let finalUrl: string = "";
+
+    if (network) {
+      finalUrl = network.explorerUrlPattern.replace("{address}", address);
+    }
+
+    return finalUrl;
+  }
 }
