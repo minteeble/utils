@@ -22,6 +22,11 @@ export interface ICreateNftCollectionRequestDto extends IBaseModel {
   address: string;
 
   /**
+   * Collection description
+   */
+  description: string;
+
+  /**
    * Collection type
    */
   type: string;
@@ -29,7 +34,7 @@ export interface ICreateNftCollectionRequestDto extends IBaseModel {
   /**
    * Collection ABI info
    */
-  ABI: any;
+  abi?: any;
 
   /**
    * Resource Owner
@@ -52,10 +57,13 @@ export class CreateNftCollectionRequestDto
   address: string;
 
   @JsonProperty()
+  description: string;
+
+  @JsonProperty()
   type: string;
 
   @JsonProperty()
-  ABI: any;
+  abi?: any;
 
   @JsonProperty()
   resourceOwner: string;

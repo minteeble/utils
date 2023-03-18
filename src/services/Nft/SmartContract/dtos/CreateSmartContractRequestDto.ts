@@ -11,6 +11,11 @@ export interface ICreateSmartContractRequestDto extends IBaseModel {
    * Smart contract address
    */
   address: string;
+
+  /**
+   * Custom abi
+   */
+  abi: string;
 }
 
 @JsonObject()
@@ -23,4 +28,7 @@ export class CreateSmartContractRequestDto
 
   @JsonProperty()
   chainName: string;
+
+  @JsonProperty()
+  abi: string;
 }

@@ -24,19 +24,24 @@ export interface INftCollectionInfoClientModel
   collectionId: string;
 
   /**
-   * Collection address
+   * Id assigned to the smart comtract
    */
-  address: string;
+  smartContractId: string;
+
+  /**
+   * Description
+   */
+  description: string;
+
+  /**
+   * Collection logo image
+   */
+  logo: string;
 
   /**
    * Collection type
    */
   type: string;
-
-  /**
-   * Collection ABI info
-   */
-  ABI: any;
 
   /**
    * Resource Owner
@@ -59,13 +64,16 @@ export class NftCollectionInfoClientModel
   collectionId: string;
 
   @JsonProperty()
-  address: string;
+  smartContractId: string;
+
+  @JsonProperty()
+  description: string;
+
+  @JsonProperty()
+  logo: string;
 
   @JsonProperty()
   type: string;
-
-  @JsonProperty()
-  ABI: any;
 
   @JsonProperty()
   resourceOwner: string;
