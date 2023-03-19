@@ -11,11 +11,6 @@ export interface IGetNftCollectionInfoRequestDto extends IBaseModel {
   chainName: string;
 
   collectionId: string;
-
-  /**
-   * Specifies if ABI has to be fetched or not.
-   */
-  fetchAbi?: string;
 }
 
 @JsonObject()
@@ -29,12 +24,7 @@ export class GetNftCollectionInfoRequestDto
   @JsonProperty()
   collectionId: string;
 
-  @JsonProperty()
-  fetchAbi?: string;
-
   constructor() {
     super();
-
-    this.fetchAbi = "0";
   }
 }
