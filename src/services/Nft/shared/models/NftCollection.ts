@@ -6,6 +6,16 @@ import {
   SingleOwnableClientModel,
 } from "../../../../shared";
 
+/**
+ * Nft collection type
+ */
+export enum CollectionType {
+  ERC721 = "ERC721",
+  ERC1155 = "ERC1155",
+  MINTEEBLE_ERC721 = "MINTEEBLE_ERC721",
+  MINTEEBLE_ERC1155 = "MINTEEBLE_ERC1155",
+}
+
 export interface INftCollectionInfoClientModel
   extends ISingleOwnableClientModel {
   /**
