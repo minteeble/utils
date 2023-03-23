@@ -41,7 +41,7 @@ export interface ISmartContractClientModel extends IBaseModel {
   /**
    * Smart contract custom ABI
    */
-  abi: string;
+  abi: any;
 }
 
 /**
@@ -68,7 +68,7 @@ export class SmartContractClientModel
   type: SmartContractType;
 
   @JsonProperty()
-  abi: string;
+  abi: any;
 
   constructor() {
     super();
