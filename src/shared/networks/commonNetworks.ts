@@ -29,7 +29,7 @@ let networks: Array<INetworkModel> = [
     chainId: 97,
     name: "Binance Smart Chain Testnet",
     currency: "tBNB",
-    urlName: "goerli",
+    urlName: "testbsc",
     isTestnet: true,
     explorerUrlPattern: "https://testnet.bscscan.io/address/{address}",
   },
