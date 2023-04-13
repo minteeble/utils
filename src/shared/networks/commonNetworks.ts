@@ -33,6 +33,30 @@ let networks: Array<INetworkModel> = [
     isTestnet: true,
     explorerUrlPattern: "https://testnet.bscscan.io/address/{address}",
   },
+  {
+    chainId: 11155111,
+    name: "Sepolia",
+    currency: "ETH",
+    urlName: "sepolia",
+    isTestnet: true,
+    explorerUrlPattern: "https://sepolia.etherscan.io/address/{address}",
+  },
+  {
+    chainId: 137,
+    name: "Polygon Mainnet",
+    currency: "MATIC",
+    urlName: "polygon",
+    isTestnet: false,
+    explorerUrlPattern: "https://polygonscan.com/address/{address}",
+  },
+  {
+    chainId: 80001,
+    name: "Mumbai",
+    currency: "MATIC",
+    urlName: "mumbai",
+    isTestnet: true,
+    explorerUrlPattern: "https://mumbai.polygonscan.com/address/{address}",
+  },
 ];
 
 export default networks;
