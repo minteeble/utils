@@ -5,7 +5,7 @@ let networks: Array<INetworkModel> = [
     chainId: 1,
     name: "Ethereum Mainnet",
     currency: "ETH",
-    urlName: "Mainnet",
+    urlName: "mainnet",
     isTestnet: false,
     explorerUrlPattern: "https:/etherscan.io/address/{address}",
   },
