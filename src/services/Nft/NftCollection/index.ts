@@ -8,3 +8,4 @@ export * from "./dtos/getChainNftCollectionsResponseDto";
 export * from "./dtos/renderCollectionItemRequestDto";
 export * from "./dtos/deleteUserNftCollectionRequestDto";
 export * from "./dtos/setCustomABIRequestDto";
+export * from "./dtos/UpdateCollectionInfoRequestDto";
