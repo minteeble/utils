@@ -2,6 +2,10 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../../shared";
 
 export interface IUpdateCollectionInfoRequestDto extends IBaseModel {
+  chainName: string;
+
+  collectionId: string;
+
   rendererId: string;
 
   generationId: string;
@@ -16,6 +20,12 @@ export class UpdateCollectionInfoRequestInfo
   extends RequestDto
   implements IUpdateCollectionInfoRequestDto
 {
+  @JsonProperty({ required: true })
+  chainName: string;
+
+  @JsonProperty({ required: true })
+  collectionId: string;
+
   @JsonProperty()
   rendererId: string;
 
