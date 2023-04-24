@@ -16,7 +16,7 @@ export interface IUpdateCollectionInfoRequestDto extends IBaseModel {
 }
 
 @JsonObject()
-export class UpdateCollectionInfoRequestInfo
+export class UpdateCollectionInfoRequestDto
   extends RequestDto
   implements IUpdateCollectionInfoRequestDto
 {
