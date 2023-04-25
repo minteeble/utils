@@ -58,7 +58,7 @@ export class RendererDataClientModel
     let object = {
       id: this.id,
       type: this.type,
-      resourcesOwner: this.resourceOwner,
+      resourceOwner: this.resourceOwner,
     };
 
     return Object.assign(object, this.attributes);
