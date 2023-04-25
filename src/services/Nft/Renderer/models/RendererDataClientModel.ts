@@ -22,6 +22,11 @@ export interface IRendererDataClientModel extends IBaseModel {
   type: NftRendererType;
 
   /**
+   * Renderer owner
+   */
+  resourceOwner: string;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: string };
@@ -38,6 +43,9 @@ export class RendererDataClientModel
   @JsonProperty({ required: true })
   type: NftRendererType;
 
+  @JsonProperty({ required: true })
+  resourceOwner: string;
+
   @JsonProperty()
   attributes: { [key: string]: any };
 
@@ -50,6 +58,7 @@ export class RendererDataClientModel
     let object = {
       id: this.id,
       type: this.type,
+      resourcesOwner: this.resourceOwner,
     };
 
     return Object.assign(object, this.attributes);
