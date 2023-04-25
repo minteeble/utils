@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { BaseModel, IBaseModel } from "../../../../shared";
+import { BaseModel, IBaseModel, RequestDto } from "../../../../shared";
 
 export interface IGetRendererRequestDto extends IBaseModel {
   rendererId: string;
@@ -7,7 +7,7 @@ export interface IGetRendererRequestDto extends IBaseModel {
 
 @JsonObject()
 export class GetRendererRequestDto
-  extends BaseModel
+  extends RequestDto
   implements IGetRendererRequestDto
 {
   @JsonProperty()
