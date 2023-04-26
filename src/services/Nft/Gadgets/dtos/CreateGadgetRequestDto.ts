@@ -4,11 +4,11 @@ import { IBaseModel, RequestDto } from "../../../../shared";
 export interface ICreateGadgetRequestDto extends IBaseModel {
   groupId: string;
 
+  tokenId: number;
+
   traitName: string;
 
   value: string;
-
-  tokenId: number;
 }
 
 @JsonObject()
@@ -20,11 +20,11 @@ export class CreateGadgetRequestDto
   groupId: string;
 
   @JsonProperty()
+  tokenId: number;
+
+  @JsonProperty()
   traitName: string;
 
   @JsonProperty()
   value: string;
-
-  @JsonProperty()
-  tokenId: number;
 }

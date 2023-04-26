@@ -6,6 +6,6 @@ export interface ICreateGadgetGroupResponseDto
   extends IGadgetGroupClientModel {}
 
 @JsonObject()
-export class CreateGadgetGroupRresponseDto
+export class CreateGadgetGroupResponseDto
   extends GadgetGroupClientModel
   implements ICreateGadgetGroupResponseDto {}
