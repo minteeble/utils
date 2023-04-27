@@ -6,3 +6,7 @@ export * from "./GetGroupGadgetsRequestDto";
 export * from "./GetGroupGadgetsResponseDto";
 export * from "./CreateGadgetImageRequestDto";
 export * from "./GetGadgetImageRequestDto";
+export * from "./GetGadgetsByOwnerRequestDto";
+export * from "./GetGadgetsByOwnerResponseDto";
+export * from "./GetGadgetGroupRequestDto";
+export * from "./GetGadgetGroupResponseDto";
