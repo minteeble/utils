@@ -8,6 +8,7 @@ export enum NftRendererType {
   DEFAULT = "DEFAULT",
   LAYERS = "LAYERS",
   ITEMS = "ITEMS",
+  GADGETS = "GADGETS",
 }
 
 export interface IRendererDataClientModel extends IBaseModel {
