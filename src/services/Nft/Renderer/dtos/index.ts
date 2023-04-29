@@ -3,3 +3,7 @@ export * from "./CreateRendererResponseDto";
 export * from "./GetRendererRequestDto";
 export * from "./GetRenderersRequestDto";
 export * from "./UpdateRendererRequestDto";
+export * from "./CreateGenerationRequestDto";
+export * from "./GetGenerationRequestDto";
+export * from "./GetGenerationsRequestDto";
+export * from "./UpdateGenerationRequestDto";
