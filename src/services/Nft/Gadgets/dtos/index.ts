@@ -10,3 +10,5 @@ export * from "./GetGadgetsByOwnerRequestDto";
 export * from "./GetGadgetsByOwnerResponseDto";
 export * from "./GetGadgetGroupRequestDto";
 export * from "./GetGadgetGroupResponseDto";
+export * from "./DeleteGadgetRequestDto";
+export * from "./DeleteGadgetGroupRequestDto";
