@@ -3,9 +3,12 @@ import { IBaseModel, RequestDto } from "../../../../shared";
 import { NftGenerationType } from "../models";
 
 export interface ICreateGenerationRequestDto extends IBaseModel {
-  maxSupply: number;
-
   type: NftGenerationType;
+
+  /**
+   * Other attributes
+   */
+  attributes: { [key: string]: string };
 }
 
 @JsonObject()
@@ -14,8 +17,8 @@ export class CreateGenerationRequestDto
   implements ICreateGenerationRequestDto
 {
   @JsonProperty()
-  maxSupply: number;
+  type: NftGenerationType;
 
   @JsonProperty()
-  type: NftGenerationType;
+  attributes: { [key: string]: string };
 }
