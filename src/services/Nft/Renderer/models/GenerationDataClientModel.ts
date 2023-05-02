@@ -15,6 +15,11 @@ export interface IGenerationDataClientModel extends IBaseModel {
   id: string;
 
   /**
+   * Renderer name
+   */
+  name: string;
+
+  /**
    * NftGeneration Type
    */
   type: NftGenerationType;
@@ -38,6 +43,9 @@ export class GenerationDataClientModel
   @JsonProperty({ required: true })
   id: string;
 
+  @JsonProperty()
+  name: string;
+
   @JsonProperty({ required: true })
   type: NftGenerationType;
 
@@ -55,6 +63,7 @@ export class GenerationDataClientModel
   public getRawGenerationData(): { [key: string]: any } {
     let object = {
       id: this.id,
+      name: this.name,
       type: this.type,
       resourceOwner: this.resourceOwner,
     };

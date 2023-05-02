@@ -9,6 +9,11 @@ export interface ICreateRendererRequestDto extends IBaseModel {
   type: NftRendererType;
 
   /**
+   * Renderer name
+   */
+  name: string;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: string };
@@ -21,6 +26,9 @@ export class CreateRendererRequestDto
 {
   @JsonProperty()
   type: NftRendererType;
+
+  @JsonProperty()
+  name: string;
 
   @JsonProperty()
   attributes: { [key: string]: string };

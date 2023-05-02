@@ -6,6 +6,11 @@ export interface ICreateGenerationRequestDto extends IBaseModel {
   type: NftGenerationType;
 
   /**
+   * Generation's name
+   */
+  name: string;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: string };
@@ -18,6 +23,9 @@ export class CreateGenerationRequestDto
 {
   @JsonProperty()
   type: NftGenerationType;
+
+  @JsonProperty()
+  name: string;
 
   @JsonProperty()
   attributes: { [key: string]: string };

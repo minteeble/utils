@@ -19,6 +19,11 @@ export interface IRendererDataClientModel extends IBaseModel {
   id: string;
 
   /**
+   * Renderer name
+   */
+  name: string;
+
+  /**
    * NftRenderer Type
    */
   type: NftRendererType;
@@ -42,6 +47,9 @@ export class RendererDataClientModel
   @JsonProperty({ required: true })
   id: string;
 
+  @JsonProperty()
+  name: string;
+
   @JsonProperty({ required: true })
   type: NftRendererType;
 
@@ -59,6 +67,7 @@ export class RendererDataClientModel
   public getRawRendererData(): { [key: string]: any } {
     let object = {
       id: this.id,
+      name: this.name,
       type: this.type,
       resourceOwner: this.resourceOwner,
     };
