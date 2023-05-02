@@ -7,3 +7,5 @@ export * from "./CreateGenerationRequestDto";
 export * from "./GetGenerationRequestDto";
 export * from "./GetGenerationsRequestDto";
 export * from "./UpdateGenerationRequestDto";
+export * from "./DeleteGenerationRequestDto";
+export * from "./DeleteRendererRequestDto";
