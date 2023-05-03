@@ -6,7 +6,7 @@ export interface IUpdateCollectionInfoRequestDto extends IBaseModel {
 
   collectionId: string;
 
-  rendererId: string;
+  rendererId: string[];
 
   generationId: string;
 
@@ -27,7 +27,7 @@ export class UpdateCollectionInfoRequestDto
   collectionId: string;
 
   @JsonProperty()
-  rendererId: string;
+  rendererId: string[];
 
   @JsonProperty()
   generationId: string;
