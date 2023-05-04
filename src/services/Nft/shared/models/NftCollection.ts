@@ -14,6 +14,7 @@ export enum CollectionType {
   ERC1155 = "ERC1155",
   MINTEEBLE_ERC721 = "MINTEEBLE_ERC721",
   MINTEEBLE_ERC1155 = "MINTEEBLE_ERC1155",
+  MINTEEBLE_GADGETS = "MINTEEBLE_GADGETS",
 }
 
 export interface INftCollectionInfoClientModel
