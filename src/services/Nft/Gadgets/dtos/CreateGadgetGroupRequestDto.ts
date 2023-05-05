@@ -4,6 +4,8 @@ import { IBaseModel, RequestDto } from "../../../../shared";
 export interface ICreateGadgetGroupRequestDto extends IBaseModel {
   name: string;
 
+  chainName: string;
+
   collectionId: string;
 }
 
@@ -14,6 +16,9 @@ export class CreateGadgetGroupRequestDto
 {
   @JsonProperty()
   name: string;
+
+  @JsonProperty()
+  chainName: string;
 
   @JsonProperty()
   collectionId: string;

@@ -8,6 +8,8 @@ export interface IGadgetGroupClientModel extends IBaseModel {
 
   resourceOwner: string;
 
+  chainName: string;
+
   collectionId: string;
 }
 
@@ -24,6 +26,9 @@ export class GadgetGroupClientModel
 
   @JsonProperty()
   resourceOwner: string;
+
+  @JsonProperty()
+  chainName: string;
 
   @JsonProperty()
   collectionId: string;
