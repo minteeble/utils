@@ -1,6 +1,9 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, BaseModel } from "../../../shared";
 
+/**
+ * All possibile requirement types
+ */
 export enum RequirementType {
   DEFAULT = "DEFAULT",
   GROUP = "GROUP",
