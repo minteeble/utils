@@ -13,7 +13,13 @@ export enum RequirementType {
   ERC20_OWNERSHIP = "ERC20_OWNERSHIP",
 }
 
+/**
+ * Requirement Client Model
+ */
 export interface IRequirementItemClientModel extends IBaseModel {
+  /**
+   * Type of Requirement Client Model
+   */
   type: RequirementType;
 }
 
