@@ -1,6 +1,6 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, BaseModel } from "../../../shared";
-import { ReservedAreaClientModel } from "../../ReservedArea/models";
+import { ReservedAreaPreviewClientModel } from "../../ReservedArea/models";
 
 /**
  * User Info
@@ -11,7 +11,7 @@ export interface IUserInfoClientModel extends IBaseModel {
   /**
    * Reserved areas in which the user is
    */
-  areas: Array<ReservedAreaClientModel>;
+  areas: Array<ReservedAreaPreviewClientModel>;
 }
 
 @JsonObject()
@@ -23,5 +23,5 @@ export class UserInfoClientModel
   userName: string;
 
   @JsonProperty()
-  areas: ReservedAreaClientModel[];
+  areas: ReservedAreaPreviewClientModel[];
 }
