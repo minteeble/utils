@@ -5,6 +5,7 @@ import { ContentType } from "../models";
 export interface IUpdateContentRequestDto extends IBaseModel {
   contentId: string;
   sectionId: string;
+  newSectionId: string;
   reservedAreaUrlName: string;
   type: ContentType;
 }
@@ -19,6 +20,12 @@ export class UpdateContentRequestDto
 
   @JsonProperty()
   sectionId: string;
+
+  @JsonProperty()
+  newSectionId: string;
+
+  @JsonProperty()
+  newReservedAreaUrlName: string;
 
   @JsonProperty()
   reservedAreaUrlName: string;

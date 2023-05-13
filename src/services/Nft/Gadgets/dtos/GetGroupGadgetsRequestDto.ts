@@ -1,6 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../../shared";
-import { GadgetInfoClientModel, IGadgetInfoClientModel } from "../models";
 
 export interface IGetGroupGadgetsRequestDto extends IBaseModel {
   groupId: string;

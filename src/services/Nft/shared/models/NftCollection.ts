@@ -36,7 +36,7 @@ export interface INftCollectionInfoClientModel
   collectionId: string;
 
   /**
-   * Id assigned to the smart comtract
+   * Id assigned to the smart contract
    */
   smartContractId: string;
 

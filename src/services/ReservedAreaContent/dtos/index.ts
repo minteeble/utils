@@ -8,3 +8,5 @@ export * from "./GetSectionRequestDto";
 export * from "./GetSectionResponseDto";
 export * from "./UpdateContentRequestDto";
 export * from "./UpdateSectionRequestDto";
+export * from "./GetSectionContentsRequestDto";
+export * from "./GetSectionContentsResponseDto";
