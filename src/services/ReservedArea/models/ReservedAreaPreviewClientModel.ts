@@ -4,7 +4,6 @@ import { IBaseModel, BaseModel } from "../../../shared";
 export interface IReservedAreaPreviewClientModel extends IBaseModel {
   urlName: string;
   displayName: string;
-  logoImage: string;
 }
 
 @JsonObject()
@@ -17,7 +16,4 @@ export class ReservedAreaPreviewClientModel
 
   @JsonProperty()
   displayName: string;
-
-  @JsonProperty()
-  logoImage: string;
 }

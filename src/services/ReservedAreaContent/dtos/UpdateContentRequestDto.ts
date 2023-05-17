@@ -25,9 +25,6 @@ export class UpdateContentRequestDto
   newSectionId: string;
 
   @JsonProperty()
-  newReservedAreaUrlName: string;
-
-  @JsonProperty()
   reservedAreaUrlName: string;
 
   @JsonProperty()

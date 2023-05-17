@@ -5,8 +5,6 @@ export interface IUpdateReservedAreaRequestDto extends IBaseModel {
   urlName: string;
   displayName: string;
   description: string;
-  logoImage: string;
-  bannerImage: string;
   accessPolicyId: string;
 }
 
@@ -23,12 +21,6 @@ export class UpdateReservedAreaRequestDto
 
   @JsonProperty()
   description: string;
-
-  @JsonProperty()
-  logoImage: string;
-
-  @JsonProperty()
-  bannerImage: string;
 
   @JsonProperty()
   accessPolicyId: string;

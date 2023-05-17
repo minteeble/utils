@@ -5,8 +5,6 @@ export interface ICreateReservedAreaRequestDto extends IBaseModel {
   urlName: string;
   displayName: string;
   description: string;
-  logoImage: string;
-  bannerImage: string;
 }
 
 @JsonObject()
@@ -22,10 +20,4 @@ export class CreateReservedAreaRequestDto
 
   @JsonProperty()
   description: string;
-
-  @JsonProperty()
-  logoImage: string;
-
-  @JsonProperty()
-  bannerImage: string;
 }

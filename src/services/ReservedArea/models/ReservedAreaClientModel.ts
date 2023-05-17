@@ -5,8 +5,6 @@ export interface IReservedAreaClientModel extends IBaseModel {
   urlName: string;
   displayName: string;
   description: string;
-  logoImage: string;
-  bannerImage: string;
   accessPolicyId: string;
   resourceOwner: string;
 }
@@ -24,12 +22,6 @@ export class ReservedAreaClientModel
 
   @JsonProperty()
   description: string;
-
-  @JsonProperty()
-  logoImage: string;
-
-  @JsonProperty()
-  bannerImage: string;
 
   @JsonProperty()
   accessPolicyId: string;
