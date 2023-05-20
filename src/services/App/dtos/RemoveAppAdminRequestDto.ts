@@ -1,19 +1,19 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../shared";
 
-export interface IUpdateAppRequestDto extends IBaseModel {
+export interface IRemoveAppAdminRequestDto extends IBaseModel {
   urlName: string;
-  displayName: string;
+  adminUserWallet: string;
 }
 
 @JsonObject()
-export class UpdateAppRequestDto
+export class RemoveAppAdminRequestDto
   extends RequestDto
-  implements IUpdateAppRequestDto
+  implements IRemoveAppAdminRequestDto
 {
   @JsonProperty()
   urlName: string;
 
   @JsonProperty()
-  displayName: string;
+  adminUserWallet: string;
 }

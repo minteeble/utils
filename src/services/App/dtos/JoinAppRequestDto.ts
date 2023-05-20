@@ -1,19 +1,15 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../shared";
 
-export interface IUpdateAppRequestDto extends IBaseModel {
+export interface IJoinAppRequestDto extends IBaseModel {
   urlName: string;
-  displayName: string;
 }
 
 @JsonObject()
-export class UpdateAppRequestDto
+export class JoinAppRequestDto
   extends RequestDto
-  implements IUpdateAppRequestDto
+  implements IJoinAppRequestDto
 {
   @JsonProperty()
   urlName: string;
-
-  @JsonProperty()
-  displayName: string;
 }

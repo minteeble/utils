@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { BaseModel, IBaseModel, RequestDto } from "../../../shared";
+import { BaseModel, IBaseModel } from "../../../shared";
 
 export interface IAppInfoClientModel extends IBaseModel {
   urlName: string;
