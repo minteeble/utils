@@ -1,3 +1,3 @@
 export * from "./models";
-export * from "./networks";
 export * from "./services";
+export * from "./networks";
