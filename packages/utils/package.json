@@ -21,7 +21,8 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "clean-build": "yarn clean && yarn build",
-    "clean": "rm -rf dist && rm -rf .build"
+    "clean": "rm -rf dist && rm -rf .build",
+    "pub": "lerna publish"
   },
   "devDependencies": {
     "core-js": "^3.30.1",
