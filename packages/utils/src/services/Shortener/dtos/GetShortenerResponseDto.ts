@@ -5,7 +5,9 @@ import { ShorteningType } from "../models";
 export interface IGetShortenerResponseDto extends IBaseModel {
   name: string;
   type: ShorteningType;
+  id: string;
   resourceOwner: string;
+  index: number | null;
   TTLDelta: number;
 }
 
@@ -21,7 +23,13 @@ export class GetShortenerResponseDto
   type: ShorteningType;
 
   @JsonProperty()
+  id: string;
+
+  @JsonProperty()
   resourceOwner: string;
+
+  @JsonProperty()
+  index: number | null;
 
   @JsonProperty()
   TTLDelta: number;
