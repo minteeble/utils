@@ -1,5 +1,6 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { BaseModel, IDtoModel } from ".";
+import { BaseModel } from "./BaseModel";
+import { IDtoModel } from "./DtoModel";
 
 export interface IRequestDto extends IDtoModel {}
 

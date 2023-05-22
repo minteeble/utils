@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { IBaseModel, BaseModel } from ".";
+import { IBaseModel, BaseModel } from "./BaseModel";
 
 /**
  * Interface for NavigatioRoute model
