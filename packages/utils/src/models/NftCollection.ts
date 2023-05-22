@@ -1,10 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import {
-  BaseModel,
-  IBaseModel,
-  ISingleOwnableClientModel,
-  SingleOwnableClientModel,
-} from ".";
+import { ISingleOwnableClientModel, SingleOwnableClientModel } from ".";
 
 /**
  * Nft collection type
