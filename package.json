@@ -2,6 +2,7 @@
   "name": "@minteeble/utils-lib",
   "private": true,
   "repository": "https://github.com/minteeble/utils.git",
+  "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "typescript-json-serializer": "^4.2.0"
