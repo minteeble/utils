@@ -4,7 +4,7 @@ export * from "./Navigation";
 export * from "./NftCollection";
 export * from "./NftCollectionPreview";
 export * from "./RequestDto";
-export * from "./SingleOwenableClientModel";
+export * from "./SingleOwnableClientModel";
 export * from "./SingleOwnable";
 export * from "./ValidatableModel";
 export * from "./nftBalanceResponseDto";
