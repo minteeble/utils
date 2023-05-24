@@ -1,5 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { IBaseModel, RequestDto } from "../../../../shared";
+import { IBaseModel, RequestDto } from "../../../models";
 
 export interface IUpdateSmartContractAbiRequestDto extends IBaseModel {
   id: string;
