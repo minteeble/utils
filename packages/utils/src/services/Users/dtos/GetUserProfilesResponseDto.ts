@@ -1,8 +1,9 @@
 import { BaseModel, IBaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
+import { UserPreviewClientModel } from "../models";
 
 export interface IGetUserProfilesResponseDto extends IBaseModel {
-  users: Array<string>;
+  users: Array<UserPreviewClientModel>;
   paginationToken?: string;
 }
 
@@ -12,7 +13,7 @@ export class GetUserProfilesResponseDto
   implements IGetUserProfilesResponseDto
 {
   @JsonProperty()
-  users: string[];
+  users: UserPreviewClientModel[];
 
   @JsonProperty()
   paginationToken?: string;
