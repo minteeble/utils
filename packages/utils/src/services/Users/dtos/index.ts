@@ -4,5 +4,6 @@ export * from "./GetUserProfileRequestDto";
 export * from "./GetUserProfileResponseDto";
 export * from "./UpdateUserProfileRequestDto";
 export * from "./GetProfileImageUrlRequestDto";
+export * from "./GetProfileImageRequestDto";
 export * from "./GetUserProfilesRequestDto";
 export * from "./GetUserProfilesResponseDto";
