@@ -1,6 +1,7 @@
 export * from "./App";
 export * from "./Gadgets";
 export * from "./NftCollection";
+export * from "./Predicates";
 export * from "./Renderer";
 export * from "./Requirements";
 export * from "./Navigation";
