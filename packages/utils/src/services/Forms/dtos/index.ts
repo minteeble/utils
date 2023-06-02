@@ -3,6 +3,8 @@ export * from "./GetFormsResponseDto";
 export * from "./CreateFormRequestDto";
 export * from "./GetFormRequestDto";
 export * from "./GetFormResponseDto";
+export * from "./GetFormAnswerRequestDto";
+export * from "./GetFormAnswerResponseDto";
 export * from "./GetFormAnswersRequestDto";
 export * from "./GetFormAnswersResponseDto";
 export * from "./SendFormAnswerRequestDto";
