@@ -5,7 +5,6 @@ export interface ICreateFormRequestDto extends IBaseModel {
   id: string;
   formName: string;
   createdAt: string;
-  resourceOwner: string;
 }
 
 @JsonObject()
@@ -21,7 +20,4 @@ export class CreateFormRequestDto
 
   @JsonProperty()
   createdAt: string;
-
-  @JsonProperty()
-  resourceOwner: string;
 }
