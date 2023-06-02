@@ -13,8 +13,8 @@ export class SendFormAnswerRequestDto
   implements ISendFormAnswerRequestDto
 {
   @JsonProperty()
-  formId: string;
+  fields: { [key: string]: any };
 
   @JsonProperty()
-  fields: { [key: string]: any };
+  formId: string;
 }
