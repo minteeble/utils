@@ -1,4 +1,4 @@
-import { IBaseModel, BaseModel } from "../../models";
+import { IBaseModel, BaseModel } from "../../../models";
 import { JsonProperty, JsonObject } from "typescript-json-serializer";
 
 export interface IFormClientModel extends IBaseModel {
