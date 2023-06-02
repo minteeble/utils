@@ -10,6 +10,7 @@ export enum NftRendererType {
   ITEMS = "ITEMS",
   GADGETS = "GADGETS",
   IPFS = "IPFS",
+  UPLOAD = "UPLOAD",
 }
 
 export interface IRendererDataClientModel extends IBaseModel {
