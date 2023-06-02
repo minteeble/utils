@@ -44,11 +44,11 @@ export class RendererDataClientModel
   extends BaseModel
   implements IRendererDataClientModel
 {
-  @JsonProperty({ required: true })
-  id: string;
-
   @JsonProperty()
   name: string;
+
+  @JsonProperty({ required: true })
+  id: string;
 
   @JsonProperty({ required: true })
   type: NftRendererType;
