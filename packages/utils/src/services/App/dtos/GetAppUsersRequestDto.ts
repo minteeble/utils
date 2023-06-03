@@ -4,7 +4,6 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IGetAppUsersRequestDto extends IBaseModel {
   urlName: string;
   paginationToken?: string | undefined;
-  userName: string;
 }
 
 @JsonObject()
@@ -17,7 +16,4 @@ export class GetAppUsersRequestDto
 
   @JsonProperty()
   paginationToken?: string | undefined;
-
-  @JsonProperty()
-  userName: string;
 }
