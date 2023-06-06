@@ -5,6 +5,8 @@ import { inputParameter } from "../models";
 export interface IGetPredicateResponseDto extends IBaseModel {
   code: string;
   inputParameters: Array<inputParameter>;
+  name: string;
+  resourceOwner: string;
   id: string;
 }
 
@@ -18,6 +20,12 @@ export class GetPredicateResponseDto
 
   @JsonProperty()
   inputParameters: inputParameter[];
+
+  @JsonProperty()
+  name: string;
+
+  @JsonProperty()
+  resourceOwner: string;
 
   @JsonProperty()
   id: string;

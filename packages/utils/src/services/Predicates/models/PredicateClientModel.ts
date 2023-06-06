@@ -6,9 +6,11 @@ export class inputParameter {
 }
 
 export interface IPredicateClientModel extends IBaseModel {
-  code: string;
-  inputParameters: Array<inputParameter>;
   id: string;
+  code: string;
+  name: string;
+  inputParameters: Array<inputParameter>;
+  resourceOwner: string;
 }
 
 @JsonObject()
@@ -17,11 +19,17 @@ export class PredicateClientModel
   implements IPredicateClientModel
 {
   @JsonProperty()
+  id: string;
+
+  @JsonProperty()
   code: string;
+
+  @JsonProperty()
+  name: string;
 
   @JsonProperty()
   inputParameters: inputParameter[];
 
   @JsonProperty()
-  id: string;
+  resourceOwner: string;
 }

@@ -5,6 +5,7 @@ import { inputParameter } from "../models";
 export interface ICreatePredicateRequestDto extends IBaseModel {
   code: string;
   inputParameters: Array<inputParameter>;
+  name: string;
 }
 
 @JsonObject()
@@ -17,4 +18,7 @@ export class CreatePredicateRequestDto
 
   @JsonProperty()
   inputParameters: inputParameter[];
+
+  @JsonProperty()
+  name: string;
 }
