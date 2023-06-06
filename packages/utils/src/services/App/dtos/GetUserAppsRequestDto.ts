@@ -4,4 +4,6 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IGetUserAppsRequestDto extends IBaseModel {}
 
 @JsonObject()
-export class GetUserAppsRequestDto extends RequestDto {}
+export class GetUserAppsRequestDto
+  extends RequestDto
+  implements IGetUserAppsRequestDto {}
