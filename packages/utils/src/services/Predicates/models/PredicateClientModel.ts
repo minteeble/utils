@@ -1,15 +1,26 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, BaseModel } from "../../../models";
 
-export class inputParameter {
+@JsonObject()
+export class PredicateParameter {
+  @JsonProperty()
   parameterName: string;
+}
+
+@JsonObject()
+export class PredicateParameterValue {
+  @JsonProperty()
+  parameterName: string;
+
+  @JsonProperty()
+  value: any;
 }
 
 export interface IPredicateClientModel extends IBaseModel {
   id: string;
   code: string;
   name: string;
-  inputParameters: Array<inputParameter>;
+  parameters: Array<PredicateParameter>;
   resourceOwner: string;
 }
 
@@ -28,7 +39,7 @@ export class PredicateClientModel
   name: string;
 
   @JsonProperty()
-  inputParameters: inputParameter[];
+  parameters: PredicateParameter[];
 
   @JsonProperty()
   resourceOwner: string;

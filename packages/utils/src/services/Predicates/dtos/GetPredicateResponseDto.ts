@@ -1,10 +1,10 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { inputParameter } from "../models";
+import { PredicateParameter } from "../models";
 
 export interface IGetPredicateResponseDto extends IBaseModel {
   code: string;
-  inputParameters: Array<inputParameter>;
+  parameters: Array<PredicateParameter>;
   name: string;
   resourceOwner: string;
   id: string;
@@ -19,7 +19,7 @@ export class GetPredicateResponseDto
   code: string;
 
   @JsonProperty()
-  inputParameters: inputParameter[];
+  parameters: PredicateParameter[];
 
   @JsonProperty()
   name: string;
