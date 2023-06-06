@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/utils",
-  "version": "1.0.132-predicates",
+  "version": "1.0.133-predicates",
   "private": false,
   "description": "Minteeble utils package.",
   "repository": "https://github.com/minteeble/utils.git",
