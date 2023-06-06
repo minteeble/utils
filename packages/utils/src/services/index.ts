@@ -1,4 +1,5 @@
 export * from "./App";
+export * from "./Forms";
 export * from "./Gadgets";
 export * from "./NftCollection";
 export * from "./Predicates";

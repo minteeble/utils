@@ -10,6 +10,7 @@ export enum NftRendererType {
   ITEMS = "ITEMS",
   GADGETS = "GADGETS",
   IPFS = "IPFS",
+  UPLOAD = "UPLOAD",
 }
 
 export interface IRendererDataClientModel extends IBaseModel {
@@ -44,11 +45,11 @@ export class RendererDataClientModel
   extends BaseModel
   implements IRendererDataClientModel
 {
-  @JsonProperty({ required: true })
-  id: string;
-
   @JsonProperty()
   name: string;
+
+  @JsonProperty({ required: true })
+  id: string;
 
   @JsonProperty({ required: true })
   type: NftRendererType;
