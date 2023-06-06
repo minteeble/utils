@@ -4,6 +4,8 @@ export * from "./GetAppRequestDto";
 export * from "./GetAppResponseDto";
 export * from "./GetAppUsersRequestDto";
 export * from "./GetAppUsersResponseDto";
+export * from "./GetUserAppsRequestDto";
+export * from "./GetUserAppsResponseDto";
 export * from "./UpdateAppRequestDto";
 export * from "./DeleteAppRequestDto";
 export * from "./JoinAppRequestDto";
