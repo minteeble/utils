@@ -1,17 +1,32 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, BaseModel } from "../../../models";
 
+/**
+ * Formal parameter held by a Predicate
+ */
 @JsonObject()
 export class PredicateParameter {
+  /**
+   * Parameter's name
+   */
   @JsonProperty()
   parameterName: string;
 }
 
+/**
+ * Actual parameters to be mapped to Predicate's formal parameters
+ */
 @JsonObject()
 export class PredicateParameterValue {
+  /**
+   * Parameter's name
+   */
   @JsonProperty()
   parameterName: string;
 
+  /**
+   * Parameter's value
+   */
   @JsonProperty()
   value: any;
 }
