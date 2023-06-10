@@ -1,19 +1,19 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IGetAppUsersRequestDto extends IBaseModel {
+export interface IRemoveAppUserRequestDto extends IBaseModel {
   urlName: string;
-  paginationToken?: string | undefined;
+  userWallet: string;
 }
 
 @JsonObject()
-export class GetAppUsersRequestDto
+export class RemoveAppUserRequestDto
   extends RequestDto
-  implements IGetAppUsersRequestDto
+  implements IRemoveAppUserRequestDto
 {
   @JsonProperty()
   urlName: string;
 
   @JsonProperty()
-  paginationToken?: string | undefined;
+  userWallet: string;
 }
