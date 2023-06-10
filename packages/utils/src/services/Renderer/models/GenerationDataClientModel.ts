@@ -30,6 +30,16 @@ export interface IGenerationDataClientModel extends IBaseModel {
   resourceOwner: string;
 
   /**
+   * Specifies if generation supports reveal or not
+   */
+  supportsReveal: boolean;
+
+  /**
+   * Specifies if reveal operation is active for users or not
+   */
+  usersCanReveal: boolean;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: string };
@@ -52,6 +62,12 @@ export class GenerationDataClientModel
   @JsonProperty({ required: true })
   resourceOwner: string;
 
+  @JsonProperty({ required: true })
+  supportsReveal: boolean;
+
+  @JsonProperty({ required: true })
+  usersCanReveal: boolean;
+
   @JsonProperty()
   attributes: { [key: string]: any };
 
@@ -66,6 +82,8 @@ export class GenerationDataClientModel
       name: this.name,
       type: this.type,
       resourceOwner: this.resourceOwner,
+      usersCanReveal: this.usersCanReveal,
+      supportsReveal: this.supportsReveal,
     };
 
     return Object.assign(object, this.attributes);
