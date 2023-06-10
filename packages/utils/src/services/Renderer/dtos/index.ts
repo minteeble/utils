@@ -10,3 +10,4 @@ export * from "./UpdateGenerationRequestDto";
 export * from "./DeleteGenerationRequestDto";
 export * from "./DeleteRendererRequestDto";
 export * from "./RevealItemRequestDto";
+export * from "./RendererPreviewRequestDto";
