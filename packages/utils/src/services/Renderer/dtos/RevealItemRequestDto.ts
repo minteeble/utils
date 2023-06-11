@@ -6,7 +6,7 @@ export interface IRevealItemRequestDto extends IBaseModel {
 
   collectionId: string;
 
-  nftId: number;
+  nftId: string;
 }
 
 @JsonObject()
@@ -21,5 +21,5 @@ export class RevealItemRequestDto
   collectionId: string;
 
   @JsonProperty()
-  nftId: number;
+  nftId: string;
 }
