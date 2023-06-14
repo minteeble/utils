@@ -14,6 +14,11 @@ export enum CollectionRenderFileType {
  */
 export interface IRenderCollectionItemRequestDto extends IBaseModel {
   /**
+   * Network chain name
+   */
+  chainName: string;
+
+  /**
    * ID of the collection
    */
   collectionId: string;
@@ -37,6 +42,9 @@ export class RenderCollectionItemRequestDto
   extends RequestDto
   implements IRenderCollectionItemRequestDto
 {
+  @JsonProperty()
+  chainName: string;
+
   @JsonProperty()
   collectionId: string;
 

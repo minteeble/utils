@@ -4,6 +4,7 @@ import { BaseModel, IBaseModel } from "../../../models";
 export interface IAppInfoClientModel extends IBaseModel {
   urlName: string;
   displayName: string;
+  owner: string;
 }
 
 @JsonObject()
@@ -16,4 +17,7 @@ export class AppInfoClientModel
 
   @JsonProperty()
   displayName: string;
+
+  @JsonProperty()
+  owner: string;
 }
