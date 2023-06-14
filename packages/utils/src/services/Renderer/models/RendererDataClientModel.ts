@@ -11,6 +11,7 @@ export enum NftRendererType {
   GADGETS = "GADGETS",
   IPFS = "IPFS",
   UPLOAD = "UPLOAD",
+  HTTP = "HTTP",
 }
 
 export interface IRendererDataClientModel extends IBaseModel {
