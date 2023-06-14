@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/utils",
-  "version": "1.0.140-reveal.2",
+  "version": "1.0.140",
   "private": false,
   "description": "Minteeble utils package.",
   "repository": "https://github.com/minteeble/utils.git",
