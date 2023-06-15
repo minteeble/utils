@@ -21,4 +21,7 @@ export class ShortenerPreviewClientModel
 
   @JsonProperty()
   TTLDelta: number;
+
+  @JsonProperty()
+  resourceOwner: string;
 }
