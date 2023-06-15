@@ -2,6 +2,52 @@ import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 
 /**
+ * Defines all necessary user shipping information
+ */
+@JsonObject()
+export class ShippingInformation {
+  /**
+   * Street name
+   */
+  @JsonProperty()
+  street: string;
+
+  /**
+   * City name
+   */
+  @JsonProperty()
+  city: string;
+
+  /**
+   * State name
+   */
+  @JsonProperty()
+  state: string;
+
+  /**
+   * Zip postal code
+   */
+  @JsonProperty()
+  zipCode: number;
+}
+
+/**
+ * User contact's information
+ */
+@JsonObject()
+export class ContactInformation {
+  /**
+   * Email address
+   */
+  email: string;
+
+  /**
+   * Telephone number
+   */
+  telephoneNumber: string;
+}
+
+/**
  * Item that has been redeemed
  */
 export interface IRedeemedItemClientModel extends IBaseModel {
@@ -18,12 +64,12 @@ export interface IRedeemedItemClientModel extends IBaseModel {
   /**
    * Redeemer's shipping info
    */
-  shippingInfo: any;
+  shippingInfo: ShippingInformation;
 
   /**
    * Redeemer's contact info
    */
-  contactInfo: any;
+  contactInfo: ContactInformation;
 
   /**
    * Redeem config ID
