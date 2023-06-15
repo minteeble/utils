@@ -2,6 +2,14 @@ import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 
 /**
+ * Redeem type (Burn type: Burn an NFT to redeem the item; Default type: backend redeeming).
+ */
+export enum RedeemType {
+  BURN = "burn",
+  DEFAULT = "default",
+}
+
+/**
  * Redeem configurations, has to be assigned by an item which will take these configs.
  */
 export interface IRedeemConfigClientModel extends IBaseModel {
@@ -16,9 +24,9 @@ export interface IRedeemConfigClientModel extends IBaseModel {
   chainName: string;
 
   /**
-   * Type of redeem (such as burn to redeem or default redeem)
+   * Type of redeem
    */
-  redeemType: string;
+  redeemType: RedeemType;
 
   /**
    * Owner's wallet address
@@ -38,7 +46,7 @@ export class RedeemConfigClientModel
   chainName: string;
 
   @JsonProperty()
-  redeemType: string;
+  redeemType: RedeemType;
 
   @JsonProperty()
   resourceOwner: string;

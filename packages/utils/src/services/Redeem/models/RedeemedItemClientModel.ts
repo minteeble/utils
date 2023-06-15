@@ -59,22 +59,27 @@ export interface IRedeemedItemClientModel extends IBaseModel {
   /**
    * Wallet address of the redeemer user
    */
-  redeemerAddress: string;
+  redeemerAddress: string | null;
 
   /**
    * Redeemer's shipping info
    */
-  shippingInfo: ShippingInformation;
+  shippingInfo: ShippingInformation | null;
 
   /**
    * Redeemer's contact info
    */
-  contactInfo: ContactInformation;
+  contactInfo: ContactInformation | null;
 
   /**
    * Redeem config ID
    */
   redeemConfigId: string;
+
+  /**
+   * Redeemed status
+   */
+  redeemed: boolean;
 }
 
 @JsonObject()
@@ -96,4 +101,7 @@ export class RedeemedItemClientModel
 
   @JsonProperty()
   redeemConfigId: string;
+
+  @JsonProperty()
+  redeemed: boolean;
 }
