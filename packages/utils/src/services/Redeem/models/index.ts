@@ -1,2 +1,2 @@
-export * from "./RedeemConfigClientModel";
-export * from "./RedeemedItemClientModel";
+export * from "./RedeemSystemInfoClientModel";
+export * from "./RedeemRequestClientModel";

@@ -6,15 +6,15 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
  */
 export enum RedeemType {
   BURN = "burn",
-  DEFAULT = "default",
+  SERVER_TRACKED = "server_tracked",
 }
 
 /**
- * Redeem configurations, has to be assigned by an item which will take these configs.
+ * Redeem configurations, has to be assigned by an item which will refer to these configs.
  */
-export interface IRedeemConfigClientModel extends IBaseModel {
+export interface IRedeemSystemInfoClientModel extends IBaseModel {
   /**
-   * RedeemConfig's id
+   * RedeemSystemInfo's id
    */
   id: string;
 
@@ -35,9 +35,9 @@ export interface IRedeemConfigClientModel extends IBaseModel {
 }
 
 @JsonObject()
-export class RedeemConfigClientModel
+export class RedeemSystemInfoClientModel
   extends BaseModel
-  implements IRedeemConfigClientModel
+  implements IRedeemSystemInfoClientModel
 {
   @JsonProperty()
   id: string;

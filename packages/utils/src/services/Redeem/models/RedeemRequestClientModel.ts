@@ -50,7 +50,7 @@ export class ContactInformation {
 /**
  * Item that has been redeemed
  */
-export interface IRedeemedItemClientModel extends IBaseModel {
+export interface IRedeemRequestClientModel extends IBaseModel {
   /**
    * Item's id
    */
@@ -83,9 +83,9 @@ export interface IRedeemedItemClientModel extends IBaseModel {
 }
 
 @JsonObject()
-export class RedeemedItemClientModel
+export class RedeemRequestClientModel
   extends BaseModel
-  implements IRedeemedItemClientModel
+  implements IRedeemRequestClientModel
 {
   @JsonProperty()
   id: string;
