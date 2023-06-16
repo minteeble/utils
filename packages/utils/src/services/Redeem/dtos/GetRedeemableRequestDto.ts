@@ -1,16 +1,19 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { RedeemType } from "../models";
 
-export interface IGetRedeemSystemInfoRequestDto extends IBaseModel {
+export interface IGetRedeemableRequestDto extends IBaseModel {
   id: string;
+  redeemConfigId: string;
 }
 
 @JsonObject()
-export class GetRedeemSystemInfoRequestDto
+export class GetRedeemableRequestDto
   extends BaseModel
-  implements IGetRedeemSystemInfoRequestDto
+  implements IGetRedeemableRequestDto
 {
   @JsonProperty()
   id: string;
+
+  @JsonProperty()
+  redeemConfigId: string;
 }

@@ -1,14 +1,14 @@
 import { IBaseModel, RequestDto } from "../../../models";
 import { JsonProperty, JsonObject } from "typescript-json-serializer";
 
-export interface ICreateRedeemedRequestDto extends IBaseModel {
+export interface ICreateRedeemableRequestDto extends IBaseModel {
   configId: string;
 }
 
 @JsonObject()
-export class CreateRedeemedRequestDto
+export class CreateRedeemableRequestDto
   extends RequestDto
-  implements ICreateRedeemedRequestDto
+  implements ICreateRedeemableRequestDto
 {
   @JsonProperty()
   configId: string;
