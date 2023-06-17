@@ -4,7 +4,7 @@ import { ContactInformation, ShippingInformation } from "../models";
 
 export interface IGetRedeemableResponseDto extends IBaseModel {
   id: string;
-  redeemerAddress: string;
+  redeemerAddress: string | null;
   shippingInfo: ShippingInformation | null;
   contactInfo: ContactInformation | null;
   redeemConfigId: string;
@@ -20,7 +20,7 @@ export class GetRedeemableResponseDto
   id: string;
 
   @JsonProperty()
-  redeemerAddress: string;
+  redeemerAddress: string | null;
 
   @JsonProperty()
   shippingInfo: ShippingInformation | null;
