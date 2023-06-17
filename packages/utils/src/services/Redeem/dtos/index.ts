@@ -4,4 +4,7 @@ export * from "./DeleteRedeemSystemInfoRequestDto";
 export * from "./DeleteRedeemableRequestDto";
 export * from "./GetRedeemSystemInfoRequestDto";
 export * from "./GetRedeemSystemInfoResponseDto";
+export * from "./GetRedeemSystemInfoResponseDto";
+export * from "./GetRedeemableRequestDto";
+export * from "./GetRedeemableResponseDto";
 export * from "./RedeemItemRequestDto";
