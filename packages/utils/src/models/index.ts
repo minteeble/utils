@@ -9,3 +9,4 @@ export * from "./SingleOwnable";
 export * from "./ValidatableModel";
 export * from "./nftBalanceResponseDto";
 export * from "./tokenBalanceResponseDto";
+export * from "./VisibilityPolicy";

@@ -7,6 +7,7 @@ export interface IGetRedeemSystemInfoResponseDto extends IBaseModel {
   chainName: string;
   redeemType: RedeemType;
   resourceOwner: string;
+  collectionId: string;
 }
 
 @JsonObject()
@@ -19,6 +20,9 @@ export class GetRedeemSystemInfoResponseDto
 
   @JsonProperty()
   chainName: string;
+
+  @JsonProperty()
+  collectionId: string;
 
   @JsonProperty()
   redeemType: RedeemType;

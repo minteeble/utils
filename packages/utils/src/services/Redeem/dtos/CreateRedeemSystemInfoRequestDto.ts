@@ -5,6 +5,8 @@ import { RedeemType } from "../models";
 export interface ICreateRedeemSystemInfoRequestDto extends IBaseModel {
   chainName: string;
   redeemType: RedeemType;
+  collectionId: string;
+  name: string;
 }
 
 @JsonObject()
@@ -12,9 +14,15 @@ export class CreateRedeemSystemInfoRequestDto
   extends RequestDto
   implements ICreateRedeemSystemInfoRequestDto
 {
-  @JsonProperty()
+  @JsonProperty({ required: true })
   chainName: string;
 
-  @JsonProperty()
+  @JsonProperty({ required: true })
+  name: string;
+
+  @JsonProperty({ required: true })
+  collectionId: string;
+
+  @JsonProperty({ required: true })
   redeemType: RedeemType;
 }
