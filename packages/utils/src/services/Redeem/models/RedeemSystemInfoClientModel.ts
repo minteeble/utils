@@ -1,9 +1,10 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
+import { RedeemSystemConfigClientModel } from "./RedeemSystemConfigClientModel";
 import {
-  IRedeemSystemConfigClientModel,
-  RedeemSystemConfigClientModel,
-} from "./RedeemSystemConfigClientModel";
+  IRedeemProductClientModel,
+  RedeemProductClientModel,
+} from "./RedeemProductClientModel";
 
 /**
  * Redeem type (Burn type: Burn an NFT to redeem the item; Default type: backend redeeming).
@@ -50,7 +51,12 @@ export interface IRedeemSystemInfoClientModel extends IBaseModel {
   /**
    * Redeem System Config
    */
-  config: IRedeemSystemConfigClientModel;
+  config: RedeemSystemConfigClientModel;
+
+  /**
+   * List of products linked to redeem
+   */
+  products: Array<IRedeemProductClientModel>;
 }
 
 @JsonObject()
@@ -78,4 +84,12 @@ export class RedeemSystemInfoClientModel
 
   @JsonProperty({ required: true })
   config: RedeemSystemConfigClientModel;
+
+  @JsonProperty()
+  products: Array<RedeemProductClientModel>;
+
+  constructor() {
+    super();
+    this.products = [];
+  }
 }
