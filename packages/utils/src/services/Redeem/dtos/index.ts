@@ -8,3 +8,4 @@ export * from "./GetRedeemSystemInfoResponseDto";
 export * from "./GetRedeemableRequestDto";
 export * from "./GetRedeemableResponseDto";
 export * from "./RedeemItemRequestDto";
+export * from "./UpdateRedeemSystemInfoRequestDto";
