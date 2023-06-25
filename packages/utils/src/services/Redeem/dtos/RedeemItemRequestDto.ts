@@ -3,7 +3,7 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { ContactInformation, ShippingInformation } from "../models";
 
 export interface IRedeemItemRequestDto extends IBaseModel {
-  id: string;
+  nftId: number;
 
   shippingInfo: ShippingInformation;
 
@@ -18,7 +18,7 @@ export class RedeemItemRequestDto
   implements IRedeemItemRequestDto
 {
   @JsonProperty()
-  id: string;
+  nftId: number;
 
   @JsonProperty()
   shippingInfo: ShippingInformation;
