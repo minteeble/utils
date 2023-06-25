@@ -4,7 +4,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IUpdateRedeemSystemProductRequestDto extends IBaseModel {
   redeemSystemId: string;
 
-  productId: string;
+  id: string;
 
   parentId?: string;
 
@@ -26,7 +26,7 @@ export class UpdateRedeemSystemProductRequestDto
   redeemSystemId: string;
 
   @JsonProperty({ required: true })
-  productId: string;
+  id: string;
 
   @JsonProperty()
   parentId?: string;
