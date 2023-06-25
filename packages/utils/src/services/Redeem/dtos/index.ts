@@ -5,6 +5,8 @@ export * from "./DeleteRedeemableRequestDto";
 export * from "./GetRedeemSystemInfoRequestDto";
 export * from "./GetRedeemSystemInfoResponseDto";
 export * from "./GetRedeemSystemInfoResponseDto";
+export * from "./GetRedeemSystemsInfoRequestDto";
+export * from "./GetRedeemSystemsInfoResponseDto";
 export * from "./GetRedeemableRequestDto";
 export * from "./GetRedeemableResponseDto";
 export * from "./RedeemItemRequestDto";
