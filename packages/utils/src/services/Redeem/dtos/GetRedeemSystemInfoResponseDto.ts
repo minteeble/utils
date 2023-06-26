@@ -1,13 +1,15 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { RedeemType } from "../models";
+import { IRedeemProductClientModel, RedeemType } from "../models";
 
 export interface IGetRedeemSystemInfoResponseDto extends IBaseModel {
   id: string;
   chainName: string;
+  name: string;
   redeemType: RedeemType;
   resourceOwner: string;
   collectionId: string;
+  products: Array<IRedeemProductClientModel>;
 }
 
 @JsonObject()
@@ -22,6 +24,9 @@ export class GetRedeemSystemInfoResponseDto
   chainName: string;
 
   @JsonProperty()
+  name: string;
+
+  @JsonProperty()
   collectionId: string;
 
   @JsonProperty()
@@ -29,4 +34,7 @@ export class GetRedeemSystemInfoResponseDto
 
   @JsonProperty()
   resourceOwner: string;
+
+  @JsonProperty()
+  products: IRedeemProductClientModel[];
 }
