@@ -9,7 +9,7 @@ export interface IRedeemItemRequestDto extends IBaseModel {
 
   contactInfo: ContactInformation;
 
-  redeemConfigId: string;
+  redeemSystemId: string;
 }
 
 @JsonObject()
@@ -27,5 +27,5 @@ export class RedeemItemRequestDto
   contactInfo: ContactInformation;
 
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 }

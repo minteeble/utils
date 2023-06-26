@@ -2,7 +2,7 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
 export interface IDeleteRedeemSystemProductRequestDto extends IBaseModel {
-  systemId: string;
+  redeemSystemId: string;
 
   productId: string;
 }
@@ -13,7 +13,7 @@ export class DeleteRedeemSystemProductRequestDto
   implements IDeleteRedeemSystemProductRequestDto
 {
   @JsonProperty({ required: true })
-  systemId: string;
+  redeemSystemId: string;
 
   @JsonProperty({ required: true })
   productId: string;

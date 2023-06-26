@@ -7,7 +7,7 @@ export interface IGetRedeemableResponseDto extends IBaseModel {
   redeemerAddress: string | null;
   shippingInfo: ShippingInformation | null;
   contactInfo: ContactInformation | null;
-  redeemConfigId: string;
+  redeemSystemId: string;
   redeemed: boolean;
 }
 
@@ -29,7 +29,7 @@ export class GetRedeemableResponseDto
   contactInfo: ContactInformation | null;
 
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 
   @JsonProperty()
   redeemed: boolean;

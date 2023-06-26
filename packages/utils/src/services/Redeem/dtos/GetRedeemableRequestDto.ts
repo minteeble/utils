@@ -3,7 +3,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 
 export interface IGetRedeemableRequestDto extends IBaseModel {
   id: string;
-  redeemConfigId: string;
+  redeemSystemId: string;
 }
 
 @JsonObject()
@@ -15,5 +15,5 @@ export class GetRedeemableRequestDto
   id: string;
 
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 }

@@ -3,7 +3,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 import { RedeemSystemConfigClientModel } from "../models";
 
 export interface IUpdateRedeemSystemInfoRequestDto extends IBaseModel {
-  id: string;
+  redeemSystemId: string;
 
   chainName: string;
 
@@ -20,7 +20,7 @@ export class UpdateRedeemSystemInfoRequestDto
   implements IUpdateRedeemSystemInfoRequestDto
 {
   @JsonProperty({ required: true })
-  id: string;
+  redeemSystemId: string;
 
   @JsonProperty()
   chainName: string;
