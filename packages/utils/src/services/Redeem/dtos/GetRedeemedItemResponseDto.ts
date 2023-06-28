@@ -2,19 +2,18 @@ import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { ContactInformation, ShippingInformation } from "../models";
 
-export interface IGetRedeemableResponseDto extends IBaseModel {
+export interface IGetRedeemedItemResponseDto extends IBaseModel {
   id: string;
   redeemerAddress: string | null;
   shippingInfo: ShippingInformation | null;
   contactInfo: ContactInformation | null;
-  redeemConfigId: string;
-  redeemed: boolean;
+  redeemSystemId: string;
 }
 
 @JsonObject()
-export class GetRedeemableResponseDto
+export class GetRedeemedItemResponseDto
   extends BaseModel
-  implements IGetRedeemableResponseDto
+  implements IGetRedeemedItemResponseDto
 {
   @JsonProperty()
   id: string;
@@ -29,8 +28,5 @@ export class GetRedeemableResponseDto
   contactInfo: ContactInformation | null;
 
   @JsonProperty()
-  redeemConfigId: string;
-
-  @JsonProperty()
-  redeemed: boolean;
+  redeemSystemId: string;
 }
