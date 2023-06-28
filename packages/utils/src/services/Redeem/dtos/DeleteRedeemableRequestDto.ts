@@ -3,7 +3,7 @@ import { JsonProperty, JsonObject } from "typescript-json-serializer";
 
 export interface IDeleteRedeemableRequestDto extends IBaseModel {
   id: string;
-  redeemConfigId: string;
+  redeemSystemId: string;
 }
 
 @JsonObject()
@@ -15,5 +15,5 @@ export class DeleteRedeemableRequestDto
   id: string;
 
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 }

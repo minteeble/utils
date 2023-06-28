@@ -2,7 +2,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 import { JsonProperty, JsonObject } from "typescript-json-serializer";
 
 export interface ICreateRedeemableRequestDto extends IBaseModel {
-  redeemConfigId: string;
+  redeemSystemId: string;
 }
 
 @JsonObject()
@@ -11,5 +11,5 @@ export class CreateRedeemableRequestDto
   implements ICreateRedeemableRequestDto
 {
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 }
