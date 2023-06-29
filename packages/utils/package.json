@@ -36,7 +36,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "typescript-json-serializer": "^5.1.0"
+    "typescript-json-serializer": "^6.0.1"
   },
   "peerDependencies": {
     "lerna": "^6.5.1"
