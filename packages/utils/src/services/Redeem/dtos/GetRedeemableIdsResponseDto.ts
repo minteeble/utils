@@ -1,5 +1,5 @@
-import { JsonProperty } from "typescript-json-serializer/dist";
-import { JsonObject } from "typescript-json-serializer/dist";
+import { JsonProperty } from "typescript-json-serializer";
+import { JsonObject } from "typescript-json-serializer";
 import { BaseModel, IBaseModel } from "../../../models";
 
 export interface IGetRedeemableIdsResponseDto extends IBaseModel {
