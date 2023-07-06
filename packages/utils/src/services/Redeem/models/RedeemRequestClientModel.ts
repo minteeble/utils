@@ -7,10 +7,34 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 @JsonObject()
 export class ShippingInformation {
   /**
-   * Street name
+   * Recipient's name
    */
   @JsonProperty()
-  street: string;
+  name: string;
+
+  /**
+   * Recipient's surname
+   */
+  @JsonProperty()
+  surname: string;
+
+  /**
+   * Special delivery instructions
+   */
+  @JsonProperty()
+  deliveryInstructions?: string;
+
+  /**
+   * Recipient's address
+   */
+  @JsonProperty()
+  address: string;
+
+  /**
+   * Street number
+   */
+  @JsonProperty()
+  streetNumber: number;
 
   /**
    * City name
@@ -19,10 +43,10 @@ export class ShippingInformation {
   city: string;
 
   /**
-   * State name
+   * country name
    */
   @JsonProperty()
-  state: string;
+  country: string;
 
   /**
    * Zip postal code
