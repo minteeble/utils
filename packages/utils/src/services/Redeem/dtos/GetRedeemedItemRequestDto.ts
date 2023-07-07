@@ -2,7 +2,7 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
 export interface IGetRedeemedItemRequestDto extends IBaseModel {
-  nftId: number;
+  nftId: string;
   redeemSystemId: string;
 }
 
@@ -12,7 +12,7 @@ export class GetRedeemedItemRequestDto
   implements IGetRedeemedItemRequestDto
 {
   @JsonProperty()
-  nftId: number;
+  nftId: string;
 
   @JsonProperty()
   redeemSystemId: string;
