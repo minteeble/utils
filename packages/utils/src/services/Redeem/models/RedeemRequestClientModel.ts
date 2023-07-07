@@ -63,11 +63,13 @@ export class ContactInformation {
   /**
    * Email address
    */
+  @JsonProperty()
   email: string;
 
   /**
    * Telephone number
    */
+  @JsonProperty()
   telephoneNumber: string;
 }
 
