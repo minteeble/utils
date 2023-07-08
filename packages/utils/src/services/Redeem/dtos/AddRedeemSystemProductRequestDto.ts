@@ -1,5 +1,9 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
+import {
+  IProductVariationClientModel,
+  ProductVariationClientModel,
+} from "../models";
 
 export interface IAddRedeemSystemProductRequestDto extends IBaseModel {
   redeemSystemId: string;
@@ -13,6 +17,8 @@ export interface IAddRedeemSystemProductRequestDto extends IBaseModel {
   attributes: { [key: string]: any };
 
   supply?: number;
+
+  variations: Array<IProductVariationClientModel>;
 }
 
 @JsonObject()
@@ -38,9 +44,13 @@ export class AddRedeemSystemProductRequestDto
   @JsonProperty()
   supply?: number;
 
+  @JsonProperty({ type: ProductVariationClientModel })
+  variations: Array<ProductVariationClientModel>;
+
   constructor() {
     super();
     this.description = "";
     this.name = "";
+    this.variations = [];
   }
 }

@@ -12,6 +12,8 @@ export interface IRedeemItemRequestDto extends IBaseModel {
   redeemSystemId: string;
 
   productId: string;
+
+  variationName: string;
 }
 
 @JsonObject()
@@ -33,4 +35,7 @@ export class RedeemItemRequestDto
 
   @JsonProperty()
   productId: string;
+
+  @JsonProperty()
+  variationName: string;
 }
