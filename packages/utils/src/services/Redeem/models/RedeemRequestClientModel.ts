@@ -34,7 +34,7 @@ export class ShippingInformation {
    * Street number
    */
   @JsonProperty()
-  streetNumber: number;
+  streetNumber: string;
 
   /**
    * City name
@@ -52,7 +52,7 @@ export class ShippingInformation {
    * Zip postal code
    */
   @JsonProperty()
-  zipCode: number;
+  zipCode: string;
 }
 
 /**
