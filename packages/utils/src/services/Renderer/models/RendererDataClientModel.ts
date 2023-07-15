@@ -31,6 +31,11 @@ export interface IRendererDataClientModel extends IBaseModel {
   type: NftRendererType;
 
   /**
+   * A condition according to which Renderer should render the image/json
+   */
+  renderingCondition?: boolean | string;
+
+  /**
    * Renderer owner
    */
   resourceOwner: string;
@@ -55,6 +60,9 @@ export class RendererDataClientModel
   @JsonProperty({ required: true })
   type: NftRendererType;
 
+  @JsonProperty()
+  renderingCondition?: boolean | string;
+
   @JsonProperty({ required: true })
   resourceOwner: string;
 
@@ -72,6 +80,7 @@ export class RendererDataClientModel
       name: this.name,
       type: this.type,
       resourceOwner: this.resourceOwner,
+      renderingCondition: this.renderingCondition,
     };
 
     return Object.assign(object, this.attributes);

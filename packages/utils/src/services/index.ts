@@ -3,6 +3,7 @@ export * from "./Forms";
 export * from "./Gadgets";
 export * from "./NftCollection";
 export * from "./Predicates";
+export * from "./Redeem";
 export * from "./Renderer";
 export * from "./Requirements";
 export * from "./Navigation";
