@@ -31,11 +31,6 @@ export interface IRendererDataClientModel extends IBaseModel {
   type: NftRendererType;
 
   /**
-   * Indicates if the data to render is cacheable or not.
-   */
-  cacheable: boolean;
-
-  /**
    * A condition according to which Renderer should render the image/json
    */
   renderingCondition?: boolean | string;
@@ -68,9 +63,6 @@ export class RendererDataClientModel
   @JsonProperty()
   renderingCondition?: boolean | string;
 
-  @JsonProperty()
-  cacheable: boolean;
-
   @JsonProperty({ required: true })
   resourceOwner: string;
 
@@ -89,7 +81,6 @@ export class RendererDataClientModel
       type: this.type,
       resourceOwner: this.resourceOwner,
       renderingCondition: this.renderingCondition,
-      cacheable: this.cacheable,
     };
 
     return Object.assign(object, this.attributes);
