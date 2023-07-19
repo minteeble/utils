@@ -28,5 +28,5 @@ export class CreateGenerationRequestDto
   name: string;
 
   @JsonProperty()
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }
