@@ -48,7 +48,7 @@ export interface IRendererDataClientModel extends IBaseModel {
   /**
    * Main resource's Base URI
    */
-  baseUri: string;
+  baseUri?: string;
 
   /**
    * Other attributes
@@ -80,7 +80,7 @@ export class RendererDataClientModel
   resourceOwner: string;
 
   @JsonProperty({ required: true })
-  baseUri: string;
+  baseUri?: string;
 
   @JsonProperty()
   attributes: { [key: string]: any };
