@@ -79,7 +79,7 @@ export class RendererDataClientModel
   @JsonProperty({ required: true })
   resourceOwner: string;
 
-  @JsonProperty({ required: true })
+  @JsonProperty()
   baseUri?: string;
 
   @JsonProperty()
