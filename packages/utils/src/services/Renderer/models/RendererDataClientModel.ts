@@ -46,6 +46,11 @@ export interface IRendererDataClientModel extends IBaseModel {
   resourceOwner: string;
 
   /**
+   * Main resource's Base URI
+   */
+  baseUri: string;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: string };
@@ -74,6 +79,9 @@ export class RendererDataClientModel
   @JsonProperty({ required: true })
   resourceOwner: string;
 
+  @JsonProperty({ required: true })
+  baseUri: string;
+
   @JsonProperty()
   attributes: { [key: string]: any };
 
@@ -90,6 +98,7 @@ export class RendererDataClientModel
       resourceOwner: this.resourceOwner,
       renderingCondition: this.renderingCondition,
       cacheable: this.cacheable,
+      baseUri: this.baseUri,
     };
 
     return Object.assign(object, this.attributes);
