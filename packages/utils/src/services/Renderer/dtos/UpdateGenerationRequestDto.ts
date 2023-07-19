@@ -4,7 +4,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IUpdateGenerationRequestDto extends IBaseModel {
   generationId: string;
 
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }
 
 @JsonObject()
@@ -16,5 +16,5 @@ export class UpdateGenerationRequestDto
   generationId: string;
 
   @JsonProperty()
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }

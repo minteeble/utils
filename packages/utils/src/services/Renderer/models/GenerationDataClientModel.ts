@@ -42,7 +42,7 @@ export interface IGenerationDataClientModel extends IBaseModel {
   /**
    * Other attributes
    */
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }
 
 @JsonObject()
