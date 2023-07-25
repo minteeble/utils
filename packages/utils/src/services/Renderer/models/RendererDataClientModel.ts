@@ -54,6 +54,11 @@ export interface IRendererDataClientModel extends IBaseModel {
    * Other attributes
    */
   attributes: { [key: string]: string };
+
+  /**
+   * Variables to be substituted inside metadata in many fields such as name, description, attributes, etc.
+   */
+  variables?: { [name: string]: string };
 }
 
 @JsonObject()
@@ -85,6 +90,9 @@ export class RendererDataClientModel
   @JsonProperty()
   attributes: { [key: string]: any };
 
+  @JsonProperty()
+  variables?: { [name: string]: string };
+
   /**
    *
    * @returns The raw version of renderer data, that can
@@ -98,6 +106,7 @@ export class RendererDataClientModel
       resourceOwner: this.resourceOwner,
       renderingCondition: this.renderingCondition,
       cacheable: this.cacheable,
+      variables: this.variables,
       baseUri: this.baseUri,
     };
 
