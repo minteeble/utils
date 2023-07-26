@@ -1,5 +1,6 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { BaseModel, IBaseModel } from "../../../models";
+import { MutationClientModel } from "./MutationClientModel";
 
 export enum NftGenerationType {
   DEFAULT = "DEFAULT",
@@ -76,6 +77,11 @@ export interface IGenerationDataClientModel extends IBaseModel {
   usersCanReveal: boolean;
 
   /**
+   * Mutation object
+   */
+  mutation?: MutationClientModel;
+
+  /**
    * Other attributes
    */
   attributes: { [key: string]: any };
@@ -110,6 +116,9 @@ export class GenerationDataClientModel
   usersCanReveal: boolean;
 
   @JsonProperty()
+  mutation?: MutationClientModel;
+
+  @JsonProperty()
   attributes: { [key: string]: any };
 
   @JsonProperty()
@@ -133,6 +142,7 @@ export class GenerationDataClientModel
       resourceOwner: this.resourceOwner,
       usersCanReveal: this.usersCanReveal,
       supportsReveal: this.supportsReveal,
+      mutation: this.mutation,
       variables: this.variables,
     };
 
