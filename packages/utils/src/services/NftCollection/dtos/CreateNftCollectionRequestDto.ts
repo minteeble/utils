@@ -1,11 +1,5 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import {
-  BaseModel,
-  IBaseModel,
-  RequestDto,
-  INftCollectionInfoClientModel,
-  NftCollectionInfoClientModel,
-} from "../../../models";
+import { IBaseModel, RequestDto } from "../../../models";
 
 export interface ICreateNftCollectionRequestDto extends IBaseModel {
   /**

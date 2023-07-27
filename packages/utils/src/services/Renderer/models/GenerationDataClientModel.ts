@@ -62,6 +62,11 @@ export interface IGenerationDataClientModel extends IBaseModel {
   type: NftGenerationType;
 
   /**
+   * NFT Renderer ID
+   */
+  renderersIds?: string[];
+
+  /**
    * Generation owner
    */
   resourceOwner: string;
@@ -106,6 +111,9 @@ export class GenerationDataClientModel
   @JsonProperty({ required: true })
   type: NftGenerationType;
 
+  @JsonProperty()
+  renderersIds?: string[];
+
   @JsonProperty({ required: true })
   resourceOwner: string;
 
@@ -139,6 +147,7 @@ export class GenerationDataClientModel
       id: this.id,
       name: this.name,
       type: this.type,
+      renderersIds: this.renderersIds,
       resourceOwner: this.resourceOwner,
       usersCanReveal: this.usersCanReveal,
       supportsReveal: this.supportsReveal,
