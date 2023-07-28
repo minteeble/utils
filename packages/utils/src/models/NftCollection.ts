@@ -59,11 +59,6 @@ export interface INftCollectionInfoClientModel
   generationId?: string;
 
   /**
-   * NFT Renderer ID
-   */
-  rendererId?: string[];
-
-  /**
    * Resource Owner
    */
   resourceOwner: string;
@@ -97,9 +92,6 @@ export class NftCollectionInfoClientModel
 
   @JsonProperty()
   generationId?: string;
-
-  @JsonProperty()
-  rendererId?: string[];
 
   @JsonProperty()
   resourceOwner: string;
