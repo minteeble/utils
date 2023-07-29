@@ -12,6 +12,7 @@ export enum NftRendererType {
   IPFS = "IPFS",
   UPLOAD = "UPLOAD",
   HTTP = "HTTP",
+  CUSTOM_HTTP = "CUSTOM_HTTP",
 }
 
 export interface IRendererDataClientModel extends IBaseModel {
