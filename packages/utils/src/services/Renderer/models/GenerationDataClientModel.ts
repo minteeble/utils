@@ -22,6 +22,10 @@ export enum NftGenerationResolutionStage {
    * Resolves variables after finale rendering has been completed.
    */
   POST_FINAL_RENDERING = "POST_RENDERING",
+
+  POST_RENDERING_METADATA = "POST_RENDERING_METADATA",
+
+  POST_RENDERING_IMAGE = "POST_RENDERING_IMAGE",
 }
 
 /**
