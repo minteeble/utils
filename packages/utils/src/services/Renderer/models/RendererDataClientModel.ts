@@ -15,6 +15,47 @@ export enum NftRendererType {
   CUSTOM_HTTP = "CUSTOM_HTTP",
 }
 
+/**
+ * Stages where variable resolution has to take place
+ */
+export enum NftRendererResolutionStage {
+  /**
+   * Always resolves, both cases: when user requests metadata or image
+   */
+  ALWAYS,
+
+  /**
+   * Resolves variable only when user requests metadata
+   */
+  ONLY_METADATA,
+
+  /**
+   * Resolves vairable only when user requests images/media
+   */
+  ONLY_IMAGE,
+}
+
+/**
+ * Nft Generation varibale object
+ */
+export interface NftRendererVariable {
+  /*
+   * variable name to be searched. If the name is "VAR", the system will search
+   * for "{{ VAR }}", in order to substitute it with the corresponding content
+   */
+  name: string;
+
+  /**
+   * variable content to be substituted
+   */
+  content: string;
+
+  /**
+   * Specifies when does the resolution has to take place
+   */
+  resolutionStage: NftRendererResolutionStage;
+}
+
 export interface IRendererDataClientModel extends IBaseModel {
   /**
    * NftRenderer ID
@@ -59,7 +100,7 @@ export interface IRendererDataClientModel extends IBaseModel {
   /**
    * Variables to be substituted inside metadata in many fields such as name, description, attributes, etc.
    */
-  variables?: { [name: string]: string };
+  variables: Array<NftRendererVariable>;
 }
 
 @JsonObject()
@@ -92,7 +133,12 @@ export class RendererDataClientModel
   attributes: { [key: string]: any };
 
   @JsonProperty()
-  variables?: { [name: string]: string };
+  variables: Array<NftRendererVariable>;
+
+  constructor() {
+    super();
+    this.variables = [];
+  }
 
   /**
    *
