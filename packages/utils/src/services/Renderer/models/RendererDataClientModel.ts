@@ -22,17 +22,17 @@ export enum NftRendererResolutionStage {
   /**
    * Always resolves, both cases: when user requests metadata or image
    */
-  ALWAYS,
+  ALWAYS = "ALWAYS",
 
   /**
    * Resolves variable only when user requests metadata
    */
-  ONLY_METADATA,
+  ONLY_METADATA = "ONLY_METADATA",
 
   /**
    * Resolves vairable only when user requests images/media
    */
-  ONLY_IMAGE,
+  ONLY_IMAGE = "ONLY_IMAGE",
 }
 
 /**
