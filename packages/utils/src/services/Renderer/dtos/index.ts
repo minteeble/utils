@@ -1,3 +1,4 @@
+export * from "./ActivateMutationRequestDto";
 export * from "./CreateRendererRequestDto";
 export * from "./CreateRendererResponseDto";
 export * from "./GetRendererRequestDto";
