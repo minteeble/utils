@@ -32,6 +32,11 @@ export interface IRenderCollectionItemRequestDto extends IBaseModel {
    * Requested file name (eg. 3.png, 759.json, etc.)
    */
   requestedFilename: string;
+
+  /**
+   * Square size of the eventual image
+   */
+  imageSize?: string;
 }
 
 /**
@@ -53,4 +58,7 @@ export class RenderCollectionItemRequestDto
 
   @JsonProperty()
   requestedFilename: string;
+
+  @JsonProperty()
+  imageSize?: string;
 }
