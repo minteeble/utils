@@ -1,4 +1,3 @@
-export * from "./ActivateMutationRequestDto";
 export * from "./CreateRendererRequestDto";
 export * from "./CreateRendererResponseDto";
 export * from "./GetRendererRequestDto";
@@ -12,6 +11,7 @@ export * from "./DeleteGenerationRequestDto";
 export * from "./DeleteRendererRequestDto";
 export * from "./RevealItemRequestDto";
 export * from "./MutateItemRequestDto";
+export * from "./SetMutationRequestDto";
 export * from "./RendererPreviewRequestDto";
 export * from "./GetNftGenerationItemsInfoRequestDto";
 export * from "./GetNftGenerationItemsInfoResponseDto";

@@ -1,7 +1,7 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IActivateMutationRequestDto extends IBaseModel {
+export interface ISetMutationRequestDto extends IBaseModel {
   chainName: string;
 
   collectionId: string;
@@ -12,9 +12,9 @@ export interface IActivateMutationRequestDto extends IBaseModel {
 }
 
 @JsonObject()
-export class ActivateMutationRequestDto
+export class SetMutationRequestDto
   extends RequestDto
-  implements IActivateMutationRequestDto
+  implements ISetMutationRequestDto
 {
   @JsonProperty()
   chainName: string;
