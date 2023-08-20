@@ -17,7 +17,7 @@
     "test": "lerna exec \"yarn run test\" --concurrency=1 --no-bail"
   },
   "devDependencies": {
-    "lerna": "^7.1.4"
+    "lerna": "7.1.4"
   },
   "workspaces": [
     "packages/*"
