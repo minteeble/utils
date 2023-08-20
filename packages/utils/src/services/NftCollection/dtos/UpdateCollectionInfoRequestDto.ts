@@ -6,8 +6,6 @@ export interface IUpdateCollectionInfoRequestDto extends IBaseModel {
 
   collectionId: string;
 
-  rendererId: string[];
-
   generationId: string;
 
   name: string;
@@ -27,9 +25,6 @@ export class UpdateCollectionInfoRequestDto
   collectionId: string;
 
   @JsonProperty()
-  rendererId: string[];
-
-  @JsonProperty()
   generationId: string;
 
   @JsonProperty()
@@ -39,8 +34,6 @@ export class UpdateCollectionInfoRequestDto
   description: string;
 
   public isValid(): boolean {
-    return this.description || this.rendererId || this.name || this.generationId
-      ? true
-      : false;
+    return this.description || this.name || this.generationId ? true : false;
   }
 }

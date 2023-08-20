@@ -1,5 +1,6 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { BaseModel, IBaseModel } from "../../../models";
+import { MutationClientModel } from "./MutationClientModel";
 
 export enum NftGenerationType {
   DEFAULT = "DEFAULT",
@@ -21,6 +22,10 @@ export enum NftGenerationResolutionStage {
    * Resolves variables after finale rendering has been completed.
    */
   POST_FINAL_RENDERING = "POST_RENDERING",
+
+  POST_RENDERING_METADATA = "POST_RENDERING_METADATA",
+
+  POST_RENDERING_IMAGE = "POST_RENDERING_IMAGE",
 }
 
 /**
@@ -61,6 +66,11 @@ export interface IGenerationDataClientModel extends IBaseModel {
   type: NftGenerationType;
 
   /**
+   * NFT Renderer ID
+   */
+  renderersIds?: string[];
+
+  /**
    * Generation owner
    */
   resourceOwner: string;
@@ -74,6 +84,11 @@ export interface IGenerationDataClientModel extends IBaseModel {
    * Specifies if reveal operation is active for users or not
    */
   usersCanReveal: boolean;
+
+  /**
+   * Mutation object
+   */
+  mutation?: MutationClientModel;
 
   /**
    * Other attributes
@@ -100,6 +115,9 @@ export class GenerationDataClientModel
   @JsonProperty({ required: true })
   type: NftGenerationType;
 
+  @JsonProperty()
+  renderersIds?: string[];
+
   @JsonProperty({ required: true })
   resourceOwner: string;
 
@@ -108,6 +126,9 @@ export class GenerationDataClientModel
 
   @JsonProperty({ required: true })
   usersCanReveal: boolean;
+
+  @JsonProperty()
+  mutation?: MutationClientModel;
 
   @JsonProperty()
   attributes: { [key: string]: any };
@@ -130,9 +151,11 @@ export class GenerationDataClientModel
       id: this.id,
       name: this.name,
       type: this.type,
+      renderersIds: this.renderersIds,
       resourceOwner: this.resourceOwner,
       usersCanReveal: this.usersCanReveal,
       supportsReveal: this.supportsReveal,
+      mutation: this.mutation,
       variables: this.variables,
     };
 
