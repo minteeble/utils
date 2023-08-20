@@ -1,20 +1,19 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IUpdateGenerationRequestDto extends IBaseModel {
+export interface IGetNftGenerationItemsInfoRequestDto extends IBaseModel {
   generationId: string;
-
-  attributes: { [key: string]: any };
+  nftGenerationItems: string;
 }
 
 @JsonObject()
-export class UpdateGenerationRequestDto
+export class GetNftGenerationItemsInfoRequestDto
   extends RequestDto
-  implements IUpdateGenerationRequestDto
+  implements IGetNftGenerationItemsInfoRequestDto
 {
   @JsonProperty()
   generationId: string;
 
   @JsonProperty()
-  attributes: { [key: string]: any };
+  nftGenerationItems: string;
 }

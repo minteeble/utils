@@ -4,9 +4,7 @@
   "repository": "https://github.com/minteeble/utils.git",
   "author": "Samuele Girgenti <samuele.girgenti458@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "typescript-json-serializer": "^4.2.0"
-  },
+  "dependencies": {},
   "main": "./packages/utils/dist/cjs/index.js",
   "module": "./packages/utils/dist/esm/index.js",
   "types": "./packages/utils/dist/esm/index.d.ts",
@@ -19,7 +17,7 @@
     "test": "lerna exec \"yarn run test\" --concurrency=1 --no-bail"
   },
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^7.1.4"
   },
   "workspaces": [
     "packages/*"

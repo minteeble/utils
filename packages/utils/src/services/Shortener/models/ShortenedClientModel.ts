@@ -9,6 +9,7 @@ export interface IShortenedClientModel extends IBaseModel {
   id: string;
   type: ShortenedType;
   object: any;
+  createdBy?: string;
 }
 
 @JsonObject()
@@ -24,4 +25,7 @@ export class ShortenedClientModel
 
   @JsonProperty()
   type: ShortenedType;
+
+  @JsonProperty()
+  createdBy?: string;
 }

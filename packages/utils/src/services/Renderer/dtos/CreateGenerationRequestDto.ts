@@ -13,7 +13,7 @@ export interface ICreateGenerationRequestDto extends IBaseModel {
   /**
    * Other attributes
    */
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }
 
 @JsonObject()
@@ -28,5 +28,5 @@ export class CreateGenerationRequestDto
   name: string;
 
   @JsonProperty()
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 }
