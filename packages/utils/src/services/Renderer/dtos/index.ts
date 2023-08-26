@@ -4,6 +4,7 @@ export * from "./GetRendererRequestDto";
 export * from "./GetRenderersRequestDto";
 export * from "./UpdateRendererRequestDto";
 export * from "./CreateGenerationRequestDto";
+export * from "./ExecuteCustomActionRequestDto";
 export * from "./GetGenerationRequestDto";
 export * from "./GetGenerationsRequestDto";
 export * from "./UpdateGenerationRequestDto";
