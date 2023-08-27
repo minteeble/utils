@@ -5,10 +5,17 @@ import { BaseModel, IBaseModel, RequestDto } from "../../../models";
  * Custom action target type.
  * Specifies where the custom action has to be executed
  */
-export enum CustomActionRequestType {
+export enum CustomActionResourceType {
   RENDERER = "renderer",
   GENERATION = "generation",
 }
+
+/**
+ * Request body for custom actions.
+ * By default it is a string.
+ * For apssing parameters JSON format can be used, the action will automatically decode it.
+ */
+export type CustomActionRequestBody = string;
 
 /**
  * Request DTO for executing a custom action
@@ -17,7 +24,7 @@ export interface ITriggerCustomActionRequestDto extends IBaseModel {
   /**
    * Target resource for running custom action
    */
-  resourceType: CustomActionRequestType;
+  resourceType: CustomActionResourceType;
 
   /**
    * Resourcve unique ID
@@ -34,7 +41,7 @@ export interface ITriggerCustomActionRequestDto extends IBaseModel {
   /**
    * Body to be passed to custom action
    */
-  requestBody: string;
+  requestBody: CustomActionRequestBody;
 }
 
 /**
@@ -46,7 +53,7 @@ export class TriggerCustomActionRequestDto
   implements ITriggerCustomActionRequestDto
 {
   @JsonProperty()
-  resourceType: CustomActionRequestType;
+  resourceType: CustomActionResourceType;
 
   @JsonProperty()
   resourceId: string;
@@ -55,5 +62,5 @@ export class TriggerCustomActionRequestDto
   actionName: string;
 
   @JsonProperty()
-  requestBody: string;
+  requestBody: CustomActionRequestBody;
 }
