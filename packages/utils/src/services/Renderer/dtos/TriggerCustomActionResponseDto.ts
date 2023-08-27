@@ -14,6 +14,16 @@ export interface ITriggerCustomActionResponseDto extends IBaseModel {
    * Action response body
    */
   responseBody: CustomActionResponseBody;
+
+  /**
+   * True if action succeded, false otherwise
+   */
+  success: boolean;
+
+  /**
+   * Optional error message, if error is true
+   */
+  errorMessage?: string;
 }
 
 /**
@@ -26,4 +36,10 @@ export class TriggerCustomActionResponseDto
 {
   @JsonProperty()
   responseBody: CustomActionResponseBody;
+
+  @JsonProperty()
+  success: boolean;
+
+  @JsonProperty()
+  errorMessage?: string | undefined;
 }
