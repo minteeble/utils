@@ -52,15 +52,15 @@ export class TriggerCustomActionRequestDto
   extends RequestDto
   implements ITriggerCustomActionRequestDto
 {
-  @JsonProperty()
+  @JsonProperty({ required: true })
   resourceType: CustomActionResourceType;
 
-  @JsonProperty()
+  @JsonProperty({ required: true })
   resourceId: string;
 
-  @JsonProperty()
+  @JsonProperty({ required: true })
   actionName: string;
 
-  @JsonProperty()
+  @JsonProperty({ required: true })
   requestBody: CustomActionRequestBody;
 }
