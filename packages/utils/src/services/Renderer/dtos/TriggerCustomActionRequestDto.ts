@@ -27,9 +27,17 @@ export interface ITriggerCustomActionRequestDto extends IBaseModel {
   resourceType: CustomActionResourceType;
 
   /**
-   * Resourcve unique ID
+   * Generation ID (must be always provided)
    */
-  resourceId: string;
+  generationId: string;
+
+  /**
+   * Renderer ID.
+   * It must be provided only if resource to be rendered is a renderer, together with generation ID.
+   * For triggering a generation custom action, this field should be empty
+   *
+   */
+  rendererId?: string;
 
   /**
    * Action name to be executed inside terget resource.
@@ -52,11 +60,28 @@ export class TriggerCustomActionRequestDto
   extends RequestDto
   implements ITriggerCustomActionRequestDto
 {
+  isValid(): boolean {
+    // If resource type is generation, then only generationId is required
+    if (this.resourceType === CustomActionResourceType.GENERATION) {
+      return !!this.generationId;
+    }
+
+    // If resource type is renderer, then both generationId and rendererId are required
+    if (this.resourceType === CustomActionResourceType.RENDERER) {
+      return !!(this.rendererId && this.generationId);
+    }
+
+    return false;
+  }
+
   @JsonProperty({ required: true })
   resourceType: CustomActionResourceType;
 
   @JsonProperty({ required: true })
-  resourceId: string;
+  generationId: string;
+
+  @JsonProperty({ required: false })
+  rendererId?: string;
 
   @JsonProperty({ required: true })
   actionName: string;
