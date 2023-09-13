@@ -1,6 +1,10 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { BaseModel, IBaseModel } from "../../../models";
-import { IRendererDataClientModel, RendererDataClientModel } from "../models";
+import { BaseModel, IBaseModel } from "../../../../models";
+import {
+  IRendererDataClientModel,
+  RendererDataClientModel,
+} from "../../models";
+import { CustomActionRequestDTO, CustomActionResponseDTO } from "../../models";
 
 /**
  * Upload strategy to be used in upload renderer.
@@ -40,12 +44,10 @@ export interface IUploadRendererDataClientModel
 }
 
 @JsonObject()
-export class UploadRendererDataCLientModel
+export class UploadRendererDataClientModel
   extends RendererDataClientModel
   implements IUploadRendererDataClientModel
 {
   @JsonProperty({ type: UploadRendererDataAttributes })
   attributes: UploadRendererDataAttributes;
 }
-
-// export class
