@@ -95,7 +95,7 @@ export interface IRendererDataClientModel extends IBaseModel {
   /**
    * Other attributes
    */
-  attributes: { [key: string]: string };
+  attributes: { [key: string]: any };
 
   /**
    * Variables to be substituted inside metadata in many fields such as name, description, attributes, etc.
