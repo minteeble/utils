@@ -22,22 +22,27 @@ export type CustomActionRequestBody = string;
  */
 export interface ITriggerCustomActionRequestDto extends IBaseModel {
   /**
+   * Collection network name
+   */
+  chainName: string;
+
+  /**
+   * Nft Collection ID
+   */
+  collectionId: string;
+
+  /**
    * Target resource for running custom action
    */
   resourceType: CustomActionResourceType;
 
   /**
-   * Generation ID (must be always provided)
+   * Represents the ID of the target resource.
+   * If `resourceType` is `renderer` than it will be considered as a `rendererId`.
+   * Instead, if equal to `generation`, than it will be considered as `generationId.
+   * The system will check if the specified resource exists insisde the collection. If not, it will return error.
    */
-  generationId: string;
-
-  /**
-   * Renderer ID.
-   * It must be provided only if resource to be rendered is a renderer, together with generation ID.
-   * For triggering a generation custom action, this field should be empty
-   *
-   */
-  rendererId?: string;
+  resourceId: string;
 
   /**
    * Action name to be executed inside terget resource.
@@ -60,28 +65,31 @@ export class TriggerCustomActionRequestDto
   extends RequestDto
   implements ITriggerCustomActionRequestDto
 {
-  isValid(): boolean {
-    // If resource type is generation, then only generationId is required
-    if (this.resourceType === CustomActionResourceType.GENERATION) {
-      return !!this.generationId;
-    }
+  // isValid(): boolean {
+  //   // If resource type is generation, then only generationId is required
+  //   if (this.resourceType === CustomActionResourceType.GENERATION) {
+  //     return !!this.generationId;
+  //   }
 
-    // If resource type is renderer, then both generationId and rendererId are required
-    if (this.resourceType === CustomActionResourceType.RENDERER) {
-      return !!(this.rendererId && this.generationId);
-    }
+  //   // If resource type is renderer, then both generationId and rendererId are required
+  //   if (this.resourceType === CustomActionResourceType.RENDERER) {
+  //     return !!(this.rendererId && this.generationId);
+  //   }
 
-    return false;
-  }
+  //   return false;
+  // }
+
+  @JsonProperty({ required: true })
+  chainName: string;
+
+  @JsonProperty({ required: true })
+  collectionId: string;
 
   @JsonProperty({ required: true })
   resourceType: CustomActionResourceType;
 
   @JsonProperty({ required: true })
-  generationId: string;
-
-  @JsonProperty({ required: false })
-  rendererId?: string;
+  resourceId: string;
 
   @JsonProperty({ required: true })
   actionName: string;
