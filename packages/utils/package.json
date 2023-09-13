@@ -1,6 +1,6 @@
 {
   "name": "@minteeble/utils",
-  "version": "1.0.173",
+  "version": "1.0.174-customaction",
   "private": false,
   "description": "Minteeble utils package.",
   "repository": "https://github.com/minteeble/utils.git",
