@@ -135,7 +135,7 @@ export class RegisterPostmintUploadRequestDto
 /**
  * Response DTO model for custom UploadRenderer's action "register-postmint-upload"
  */
-interface IRegisterPostmintUploadRepsonseDto {
+export interface IRegisterPostmintUploadRepsonseDto {
   /**
    * Pre-signed url for upoading metadata file
    */
