@@ -9,33 +9,59 @@ export enum UploadRendererCustomActionNames {
   ConfirmPostmintItemsUploaded = "confirm-postmint-items-uploaded",
 }
 
-/**
- * DTO for registering request (for uploading items)
- */
-@JsonObject()
-export class RegisterPremintUploadRequestDto extends CustomActionRequestDTO {}
+// --- RegisterPremintUpload ---
 
 /**
- * Response containing urls for uploading files
+ * DTO interface for registering request (for uploading items)
  */
+export interface IRegisterPremintUploadRequestDto {}
+
 @JsonObject()
-export class RegisterPremintUploadResponseDto extends CustomActionResponseDTO {
+export class RegisterPremintUploadRequestDto
+  extends CustomActionRequestDTO
+  implements IRegisterPremintUploadRequestDto {}
+
+export interface IRegisterPremintUploadResponseDto {
   /**
    * Pre-signed url for upoading metadata file
    */
-  @JsonProperty({ required: true })
   uploadMetadataUrl: string;
 
   /**
    * Pre-signed url for upoading image file
    */
-  @JsonProperty({ required: true })
   uploadImageUrl: string;
 
   /**
    * RequestId to be used for confirming items uploaded, and also for pairing mint operation
    */
+  requestId: string;
+}
+
+/**
+ * Response containing urls for uploading files
+ */
+@JsonObject()
+export class RegisterPremintUploadResponseDto
+  extends CustomActionResponseDTO
+  implements IRegisterPremintUploadResponseDto
+{
   @JsonProperty({ required: true })
+  uploadMetadataUrl: string;
+
+  @JsonProperty({ required: true })
+  uploadImageUrl: string;
+
+  @JsonProperty({ required: true })
+  requestId: string;
+}
+
+// --- ConfirmPremintItemsUploadedAction ---
+
+export interface IConfirmPremintItemsUploadedActionRequestDto {
+  /**
+   * The requiestId this confirmation refers to
+   */
   requestId: string;
 }
 
@@ -43,29 +69,47 @@ export class RegisterPremintUploadResponseDto extends CustomActionResponseDTO {
  * DTO for confirming that items have been succesfully uploaded
  */
 @JsonObject()
-export class ConfirmPremintItemsUploadedActionRequestDto extends CustomActionRequestDTO {
-  /**
-   * The requiestId this confirmation refers to
-   */
+export class ConfirmPremintItemsUploadedActionRequestDto
+  extends CustomActionRequestDTO
+  implements IConfirmPremintItemsUploadedActionRequestDto
+{
   @JsonProperty({ required: true })
   requestId: string;
 }
 
-@JsonObject()
-export class ConfirmPremintItemsUploadedActionResponseDto extends CustomActionResponseDTO {}
+export interface IConfirmPremintItemsUploadedActionResponseDto {}
 
 @JsonObject()
-export class ConfirmNftMintedActionRequestDto extends CustomActionRequestDTO {
+export class ConfirmPremintItemsUploadedActionResponseDto
+  extends CustomActionResponseDTO
+  implements IConfirmPremintItemsUploadedActionResponseDto {}
+
+// --- ConfirmNftMinted ---
+
+export interface IConfirmNftMintedActionRequestDto {
   /**
    * Id of the current request.
    * It shoukd be the same returned by the "confirm-premint-item-uploaded" action.
    */
-  @JsonProperty({ required: true })
   requestId: string;
 }
 
 @JsonObject()
-export class ConfirmNftMintedActionResponseDto extends CustomActionResponseDTO {
+export class ConfirmNftMintedActionRequestDto
+  extends CustomActionRequestDTO
+  implements IConfirmNftMintedActionRequestDto
+{
+  @JsonProperty({ required: true })
+  requestId: string;
+}
+
+export interface IConfirmNftMintedActionResponseDto {}
+
+@JsonObject()
+export class ConfirmNftMintedActionResponseDto
+  extends CustomActionResponseDTO
+  implements IConfirmNftMintedActionResponseDto
+{
   @JsonProperty({ required: true })
   nftId: number;
 
@@ -76,20 +120,38 @@ export class ConfirmNftMintedActionResponseDto extends CustomActionResponseDTO {
   metadataUrl: string;
 }
 
+// --- RegisterPostmintUpload ---
+
 /**
  * Request DTO model for UploadRenderer's action "register-postmint-upload".
  */
+interface IRegisterPostmintUploadRequestDto {}
+
 @JsonObject()
-export class RegisterPostmintUploadRequestDto extends CustomActionRequestDTO {}
+export class RegisterPostmintUploadRequestDto
+  extends CustomActionRequestDTO
+  implements IRegisterPostmintUploadRequestDto {}
 
 /**
  * Response DTO model for custom UploadRenderer's action "register-postmint-upload"
  */
-@JsonObject()
-export class RegisterPostmintUploadRepsonseDto extends CustomActionResponseDTO {
+interface IRegisterPostmintUploadRepsonseDto {
   /**
    * Pre-signed url for upoading metadata file
    */
+  uploadMetadataUrl: string;
+
+  /**
+   * Pre-signed url for upoading image file
+   */
+  uploadImageUrl: string;
+}
+
+@JsonObject()
+export class RegisterPostmintUploadRepsonseDto
+  extends CustomActionResponseDTO
+  implements IRegisterPostmintUploadRepsonseDto
+{
   @JsonProperty({ required: true })
   uploadMetadataUrl: string;
 
@@ -100,17 +162,38 @@ export class RegisterPostmintUploadRepsonseDto extends CustomActionResponseDTO {
   uploadImageUrl: string;
 }
 
+// --- ConfirmPostmintItemsUploaded ---
+
 /**
  * Request DTO model for UploadRenderer's action "confirm-postmint-items-uploaded".
  */
+export interface IConfirmPostmintItemsUploadedRequestDto {}
+
 @JsonObject()
-export class ConfirmPostmintItemsUploadedRequestDto extends CustomActionRequestDTO {}
+export class ConfirmPostmintItemsUploadedRequestDto
+  extends CustomActionRequestDTO
+  implements IConfirmPostmintItemsUploadedRequestDto {}
 
 /**
  * Response DTO model for custom UploadRenderer's action "confirm-postmint-items-uploaded"
  */
+export interface IConfirmPostmintItemsUploadedRepsonseDto {
+  /**
+   * Pre-signed url for upoading metadata file
+   */
+  uploadMetadataUrl: string;
+
+  /**
+   * Pre-signed url for upoading image file
+   */
+  uploadImageUrl: string;
+}
+
 @JsonObject()
-export class ConfirmPostmintItemsUploadedRepsonseDto extends CustomActionResponseDTO {
+export class ConfirmPostmintItemsUploadedRepsonseDto
+  extends CustomActionResponseDTO
+  implements IConfirmPostmintItemsUploadedRepsonseDto
+{
   /**
    * Pre-signed url for upoading metadata file
    */
