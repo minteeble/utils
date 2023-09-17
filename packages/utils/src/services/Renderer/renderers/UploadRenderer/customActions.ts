@@ -103,7 +103,13 @@ export class ConfirmNftMintedActionRequestDto
   requestId: string;
 }
 
-export interface IConfirmNftMintedActionResponseDto {}
+export interface IConfirmNftMintedActionResponseDto {
+  nftId: number;
+
+  imageUrl: string;
+
+  metadataUrl: string;
+}
 
 @JsonObject()
 export class ConfirmNftMintedActionResponseDto
