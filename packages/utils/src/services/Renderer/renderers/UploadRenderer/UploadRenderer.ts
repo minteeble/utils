@@ -29,6 +29,9 @@ export interface IUploadRendererDataAttributes extends IBaseModel {
   uploadStretegies: number;
 }
 
+/**
+ * `UploadRenderer` Data Attributes class model
+ */
 @JsonObject()
 export class UploadRendererDataAttributes
   extends BaseModel
@@ -37,12 +40,17 @@ export class UploadRendererDataAttributes
   @JsonProperty()
   uploadStretegies: number;
 }
-
+/**
+ * `UploadRenderer` interface client model
+ */
 export interface IUploadRendererDataClientModel
   extends IRendererDataClientModel {
   attributes: IUploadRendererDataAttributes | { [key: string]: any };
 }
 
+/**
+ * `UploadRenderer` class client model
+ */
 @JsonObject()
 export class UploadRendererDataClientModel
   extends RendererDataClientModel
