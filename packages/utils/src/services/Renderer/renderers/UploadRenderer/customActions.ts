@@ -1,6 +1,9 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { CustomActionRequestDTO, CustomActionResponseDTO } from "../../models";
 
+/**
+ * Names of `UploadRenderer` custom actions
+ */
 export enum UploadRendererCustomActionNames {
   RegisterPremintUpload = "register-premint-upload-request",
   ConfirmPremintItemsUploaded = "confirm-premint-items-uploaded",

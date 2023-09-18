@@ -22,6 +22,9 @@ export enum UploadStrategy {
   PostMint = 0x2,
 }
 
+/**
+ * `UploadRenderer` Data Attributes interface model
+ */
 export interface IUploadRendererDataAttributes extends IBaseModel {
   /**
    * Enables upload startegies
