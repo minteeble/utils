@@ -70,7 +70,7 @@ let networks: Array<INetworkModel> = [
     chainId: 7777777,
     name: "Zora",
     urlName: "zora",
-    isTestnet: true,
+    isTestnet: false,
     explorerUrlPattern: "https://explorer.zora.energy/address/{address}",
     currency: "ETH",
   },
