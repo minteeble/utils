@@ -74,6 +74,22 @@ let networks: Array<INetworkModel> = [
     explorerUrlPattern: "https://explorer.zora.energy/address/{address}",
     currency: "ETH",
   },
+  {
+    chainId: 84531,
+    name: "Base Goerli",
+    urlName: "base-goerli",
+    isTestnet: true,
+    explorerUrlPattern: "https://goerli.basescan.orgy/address/{address}",
+    currency: "ETH",
+  },
+  {
+    chainId: 8453,
+    name: "Base",
+    urlName: "base",
+    isTestnet: false,
+    explorerUrlPattern: "https://basescan.org/address/{address}",
+    currency: "ETH",
+  },
 ];
 
 export default networks;
