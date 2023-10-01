@@ -14,3 +14,4 @@ export * from "./GetGadgetGroupResponseDto";
 export * from "./DeleteGadgetRequestDto";
 export * from "./DeleteGadgetGroupRequestDto";
 export * from "./UpdateGadgetGroupRequestDto";
+export * from "./UpdateGadgetRequestDto";
