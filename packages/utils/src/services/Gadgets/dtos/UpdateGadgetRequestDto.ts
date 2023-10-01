@@ -4,7 +4,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IUpdateGadgetRequestDto extends IBaseModel {
   groupId: string;
 
-  tokenId: number;
+  tokenId: string;
 
   newTraitName: string;
 
@@ -20,7 +20,7 @@ export class UpdateGadgetRequestDto
   groupId: string;
 
   @JsonProperty()
-  tokenId: number;
+  tokenId: string;
 
   @JsonProperty()
   newTraitName: string;

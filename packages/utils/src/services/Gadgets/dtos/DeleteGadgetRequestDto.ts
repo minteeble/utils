@@ -4,7 +4,7 @@ import { IBaseModel, RequestDto } from "../../../models";
 export interface IDeleteGadgetRequestDto extends IBaseModel {
   groupId: string;
 
-  tokenId: number;
+  tokenId: string;
 }
 
 @JsonObject()
@@ -16,5 +16,5 @@ export class DeleteGadgetRequestDto
   groupId: string;
 
   @JsonProperty()
-  tokenId: number;
+  tokenId: string;
 }
