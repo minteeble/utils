@@ -3,6 +3,11 @@ import { JsonObject, JsonProperty } from "typescript-json-serializer";
 
 export interface INavigationPageClientModel extends IBaseModel {
   /**
+   * Page name
+   */
+  name: string;
+
+  /**
    * Page title
    */
   title: string;
@@ -23,6 +28,9 @@ export class NavigationPageClientModel
   extends BaseModel
   implements INavigationPageClientModel
 {
+  @JsonProperty()
+  name: string;
+
   @JsonProperty()
   title: string;
 

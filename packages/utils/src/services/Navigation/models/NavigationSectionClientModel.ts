@@ -4,6 +4,11 @@ import { NavigationPageClientModel } from "./NavigationPageClientModel";
 
 export interface INavigationSectionClientModel extends IBaseModel {
   /**
+   * Section name
+   */
+  name: string;
+
+  /**
    * Section title
    */
   title: string;
@@ -19,6 +24,9 @@ export class NavigationSectionClientModel
   extends BaseModel
   implements INavigationSectionClientModel
 {
+  @JsonProperty()
+  name: string;
+
   @JsonProperty()
   title: string;
 
