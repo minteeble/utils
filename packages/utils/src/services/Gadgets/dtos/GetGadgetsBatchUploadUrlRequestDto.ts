@@ -1,14 +1,14 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IGetGadgetsZipFileUploadUrlRequestDto extends IBaseModel {
+export interface IGetGadgetsBatchUploadUrlRequestDto extends IBaseModel {
   groupId: string;
 }
 
 @JsonObject()
-export class GetGadgetsZipFileUploadUrlRequestDto
+export class GetGadgetsBatchUploadUrlRequestDto
   extends RequestDto
-  implements IGetGadgetsZipFileUploadUrlRequestDto
+  implements IGetGadgetsBatchUploadUrlRequestDto
 {
   @JsonProperty()
   groupId: string;

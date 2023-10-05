@@ -2,7 +2,7 @@ export * from "./CreateGadgetGroupRequestDto";
 export * from "./CreateGadgetRequestDto";
 export * from "./CreateGadgetGroupResponseDto";
 export * from "./CreateGadgetResponseDto";
-export * from "./GetGadgetsZipFileUploadUrlRequestDto";
+export * from "./GetGadgetsBatchUploadUrlRequestDto";
 export * from "./GetGroupGadgetsRequestDto";
 export * from "./GetGroupGadgetsResponseDto";
 export * from "./CreateGadgetImageRequestDto";
