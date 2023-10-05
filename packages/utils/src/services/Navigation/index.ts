@@ -1,2 +1,2 @@
-export * from "./models/getNavigationByGroupRequestDto";
-export * from "./models/getNavigationByGroupResponseDto";
+export * from "./dtos/getNavigationByGroupRequestDto";
+export * from "./dtos/getNavigationByGroupResponseDto";
