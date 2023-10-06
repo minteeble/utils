@@ -1,12 +1,11 @@
 import { BaseModel, IBaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
-import { NavigationSectionClientModel } from "./NavigationSectionClientModel";
 
 export interface INavigationGroupClientModel extends IBaseModel {
   /**
    * Array containing all the sections
    */
-  sections: NavigationSectionClientModel[];
+  sections: string[];
 }
 
 @JsonObject()
@@ -15,5 +14,5 @@ export class NavigationInfo
   implements INavigationGroupClientModel
 {
   @JsonProperty()
-  sections: NavigationSectionClientModel[];
+  sections: string[];
 }

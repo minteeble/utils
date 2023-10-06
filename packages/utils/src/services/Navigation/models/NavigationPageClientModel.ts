@@ -20,7 +20,7 @@ export interface INavigationPageClientModel extends IBaseModel {
   /**
    * Short page description
    */
-  tooltip: string;
+  tooltip?: string;
 }
 
 @JsonObject()
@@ -38,5 +38,5 @@ export class NavigationPageClientModel
   path: string;
 
   @JsonProperty()
-  tooltip: string;
+  tooltip?: string;
 }
