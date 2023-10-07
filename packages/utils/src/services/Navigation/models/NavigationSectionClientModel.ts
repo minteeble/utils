@@ -2,6 +2,15 @@ import { BaseModel, IBaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { NavigationPageClientModel } from "./NavigationPageClientModel";
 
+/**
+ * Role visibility
+ */
+export enum RoleType {
+  USER = "user",
+  ADMIN = "admin",
+  SUPERADMIN = "superadmin",
+}
+
 export interface INavigationSectionClientModel extends IBaseModel {
   /**
    * Section name

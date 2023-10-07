@@ -1,5 +1,6 @@
 import { IBaseModel, RequestDto } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
+import { RoleType } from "../models";
 
 export interface ICreateNavigationSectionRequestDto extends IBaseModel {
   groupName: string;
@@ -7,6 +8,8 @@ export interface ICreateNavigationSectionRequestDto extends IBaseModel {
   sectionName: string;
 
   title: string;
+
+  role: RoleType;
 }
 
 @JsonObject()
@@ -22,4 +25,7 @@ export class CreateNavigationSectionRequestDto
 
   @JsonProperty()
   title: string;
+
+  @JsonProperty()
+  role: RoleType;
 }
