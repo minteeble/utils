@@ -10,7 +10,7 @@ export interface IBatchCreateGadgetsRequestDto extends IBaseModel {
    * The ID of the gadget group to which the gadgets belong.
    * @type {string}
    */
-  gadgetGroupId: string;
+  groupId: string;
 
   /**
    * The ID of the request.
@@ -29,7 +29,7 @@ export class BatchCreateGadgetsRequestDto
   implements IBatchCreateGadgetsRequestDto
 {
   @JsonProperty()
-  gadgetGroupId: string;
+  groupId: string;
 
   @JsonProperty()
   requestId: string;
