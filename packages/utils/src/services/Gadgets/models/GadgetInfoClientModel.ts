@@ -24,6 +24,16 @@ export interface IGadgetInfoClientModel extends IBaseModel {
    * Gadget's token ID inside the group
    */
   tokenId: number;
+
+  /**
+   * Whether the gadget has an image (optional)
+   */
+  hasImage?: boolean;
+
+  /**
+   * Gadget's image URL (optional)
+   */
+  imageUrl?: string;
 }
 
 @JsonObject()
@@ -42,4 +52,10 @@ export class GadgetInfoClientModel
 
   @JsonProperty()
   tokenId: number;
+
+  @JsonProperty({ required: false })
+  hasImage?: boolean;
+
+  @JsonProperty({ required: false })
+  imageUrl?: string;
 }
