@@ -1,9 +1,13 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
+import { RoleType } from "../models";
 
 export interface IGetNavigationGroupResponseDto extends IBaseModel {
   groupName: string;
-  sectionNames: string[];
+
+  role: RoleType;
+
+  sections: string[];
 }
 
 @JsonObject()
@@ -15,5 +19,8 @@ export class GetNavigationGroupResponseDto
   groupName: string;
 
   @JsonProperty()
-  sectionNames: string[];
+  role: RoleType;
+
+  @JsonProperty()
+  sections: string[];
 }
