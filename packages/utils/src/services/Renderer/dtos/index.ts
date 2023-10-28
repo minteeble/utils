@@ -17,3 +17,5 @@ export * from "./GetNftGenerationItemsInfoRequestDto";
 export * from "./GetNftGenerationItemsInfoResponseDto";
 export * from "./TriggerCustomActionRequestDto";
 export * from "./TriggerCustomActionResponseDto";
+export * from "./FilterNftsOnTraitsRequestDto";
+export * from "./FilterNftsOnTraitsResponseDto";
