@@ -39,9 +39,9 @@ export interface IRenderCollectionItemRequestDto extends IBaseModel {
   imageSize?: string;
 
   /**
-   * Disable mutation of the collection item.
+   * Whether to disable mutation of the image
    */
-  disableMutation?: boolean;
+  showMutation?: boolean;
 }
 
 /**
@@ -68,5 +68,5 @@ export class RenderCollectionItemRequestDto
   imageSize?: string;
 
   @JsonProperty()
-  disableMutation?: boolean;
+  showMutation?: boolean;
 }
