@@ -44,9 +44,14 @@ export interface IRedeemProductClientModel extends IBaseModel {
   description: string;
 
   /**
-   * Product custom image
+   * Product custom images urls
    */
-  imageUrl: string;
+  imageUrls: Array<string>;
+
+  /**
+   * Product custom images number
+   */
+  imagesNumber: number;
 
   /**
    * Custom additional attributes
@@ -81,7 +86,10 @@ export class RedeemProductClientModel
   description: string;
 
   @JsonProperty()
-  imageUrl: string;
+  imageUrls: Array<string>;
+
+  @JsonProperty()
+  imagesNumber: number;
 
   @JsonProperty()
   attributes: { [key: string]: any };
