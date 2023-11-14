@@ -10,5 +10,7 @@ export * from "./GetNavigationPageRequestDto";
 export * from "./GetNavigationPageResponseDto";
 export * from "./GetNavigationSectionRequestDto";
 export * from "./GetNavigationSectionResponseDto";
+export * from "./GetNavigationSectionsRequestDto";
+export * from "./GetNavigationSectionsResponseDto";
 export * from "./UpdateNavigationPageResponseDto";
 export * from "./UpdateNavigationSectionRequestDto";

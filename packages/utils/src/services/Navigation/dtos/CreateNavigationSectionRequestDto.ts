@@ -8,8 +8,6 @@ export interface ICreateNavigationSectionRequestDto extends IBaseModel {
   sectionName: string;
 
   title: string;
-
-  role: RoleType;
 }
 
 @JsonObject()
@@ -25,7 +23,4 @@ export class CreateNavigationSectionRequestDto
 
   @JsonProperty()
   title: string;
-
-  @JsonProperty()
-  role: RoleType;
 }

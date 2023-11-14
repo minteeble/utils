@@ -18,6 +18,11 @@ export interface INavigationPageClientModel extends IBaseModel {
   path: string;
 
   /**
+   * Icon path
+   */
+  iconPath: string;
+
+  /**
    * Short page description
    */
   tooltip?: string;
@@ -36,6 +41,9 @@ export class NavigationPageClientModel
 
   @JsonProperty()
   path: string;
+
+  @JsonProperty()
+  iconPath: string;
 
   @JsonProperty()
   tooltip?: string;
