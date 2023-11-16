@@ -1,15 +1,15 @@
 import { JsonProperty, JsonObject } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IGetRedeemProductImageUrl extends IBaseModel {
+export interface IGetRedeemProductImageUrlRequestDto extends IBaseModel {
   redeemSystemId: string;
   productId: string;
 }
 
 @JsonObject()
-export class GetRedeemProductImageUrl
+export class GetRedeemProductImageUrlRequestDto
   extends RequestDto
-  implements IGetRedeemProductImageUrl
+  implements IGetRedeemProductImageUrlRequestDto
 {
   @JsonProperty()
   redeemSystemId: string;
