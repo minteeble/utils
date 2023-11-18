@@ -18,3 +18,5 @@ export * from "./DeleteRedeemSystemProductRequestDto";
 export * from "./DeleteRedeemSystemProductImageRequestDto";
 export * from "./GetRedeemableIdsRequestDto";
 export * from "./GetRedeemableIdsResponseDto";
+export * from "./getRedeemRequestsRequestDto";
+export * from "./GetRedeemRequestsResponseDto";

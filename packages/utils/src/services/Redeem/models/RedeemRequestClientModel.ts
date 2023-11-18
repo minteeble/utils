@@ -1,5 +1,9 @@
 import { IBaseModel, BaseModel } from "../../../models";
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
+import {
+  IRedeemProductClientModel,
+  RedeemProductClientModel,
+} from "./RedeemProductClientModel";
 
 /**
  * Defines all necessary user shipping information
@@ -74,13 +78,13 @@ export class ContactInformation {
 }
 
 /**
- * Item that has been redeemed
+ * Redeem request client model
  */
 export interface IRedeemRequestClientModel extends IBaseModel {
   /**
-   * Item's id
+   * Item NFT ID
    */
-  id: string;
+  nftId: number;
 
   /**
    * Wallet address of the redeemer user
@@ -100,34 +104,45 @@ export interface IRedeemRequestClientModel extends IBaseModel {
   /**
    * Redeem config ID
    */
-  redeemConfigId: string;
+  redeemSystemId: string;
 
   /**
-   * Redeemed status
+   * Product selected during item redemption
    */
-  redeemed: boolean;
+  product: IRedeemProductClientModel;
+
+  /**
+   * Selected product variation name
+   */
+  variationName: string;
 }
 
+/**
+ * Redeem request client model
+ */
 @JsonObject()
 export class RedeemRequestClientModel
   extends BaseModel
   implements IRedeemRequestClientModel
 {
   @JsonProperty()
-  id: string;
+  nftId: number;
 
   @JsonProperty()
-  redeemerAddress: string;
+  redeemerAddress: string | null;
 
   @JsonProperty()
-  shippingInfo: any;
+  shippingInfo: ShippingInformation | null;
 
   @JsonProperty()
-  contactInfo: any;
+  contactInfo: ContactInformation | null;
 
   @JsonProperty()
-  redeemConfigId: string;
+  redeemSystemId: string;
 
   @JsonProperty()
-  redeemed: boolean;
+  product: IRedeemProductClientModel;
+
+  @JsonProperty()
+  variationName: string;
 }
