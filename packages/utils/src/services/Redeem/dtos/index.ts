@@ -20,3 +20,4 @@ export * from "./GetRedeemableIdsRequestDto";
 export * from "./GetRedeemableIdsResponseDto";
 export * from "./GetRedeemRequestsRequestDto";
 export * from "./GetRedeemRequestsResponseDto";
+export * from "./SendItemRedeemedEmailRequestDto";
