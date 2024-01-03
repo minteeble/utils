@@ -15,3 +15,4 @@ export * from "./LeaveAppRequestDto";
 export * from "./AddAppAdminRequestDto";
 export * from "./RemoveAppAdminRequestDto";
 export * from "./RemoveAppUserRequestDto";
+export * from "./GetUserRoleResponseDto";
