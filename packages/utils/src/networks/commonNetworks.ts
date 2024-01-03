@@ -58,7 +58,7 @@ let networks: Array<INetworkModel> = [
     explorerUrlPattern: "https://mumbai.polygonscan.com/address/{address}",
   },
   {
-    chainId: 999,
+    chainId: 999999999,
     name: "Zora Testnet",
     urlName: "zora-goerli",
     isTestnet: true,
