@@ -1,20 +1,15 @@
 import { JsonObject, JsonProperty } from "typescript-json-serializer";
 import { IBaseModel, RequestDto } from "../../../models";
 
-export interface IDeleteGadgetRequestDto extends IBaseModel {
+export interface IGetGadgetsBatchUploadUrlRequestDto extends IBaseModel {
   groupId: string;
-
-  tokenId: string;
 }
 
 @JsonObject()
-export class DeleteGadgetRequestDto
+export class GetGadgetsBatchUploadUrlRequestDto
   extends RequestDto
-  implements IDeleteGadgetRequestDto
+  implements IGetGadgetsBatchUploadUrlRequestDto
 {
   @JsonProperty()
   groupId: string;
-
-  @JsonProperty()
-  tokenId: string;
 }

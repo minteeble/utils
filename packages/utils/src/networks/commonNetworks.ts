@@ -57,6 +57,39 @@ let networks: Array<INetworkModel> = [
     isTestnet: true,
     explorerUrlPattern: "https://mumbai.polygonscan.com/address/{address}",
   },
+  {
+    chainId: 999999999,
+    name: "Zora Testnet",
+    urlName: "zora-goerli",
+    isTestnet: true,
+    explorerUrlPattern:
+      "https://testnet.explorer.zora.energy/address/{address}",
+    currency: "ETH",
+  },
+  {
+    chainId: 7777777,
+    name: "Zora",
+    urlName: "zora",
+    isTestnet: false,
+    explorerUrlPattern: "https://explorer.zora.energy/address/{address}",
+    currency: "ETH",
+  },
+  {
+    chainId: 84531,
+    name: "Base Goerli",
+    urlName: "base-goerli",
+    isTestnet: true,
+    explorerUrlPattern: "https://goerli.basescan.orgy/address/{address}",
+    currency: "ETH",
+  },
+  {
+    chainId: 8453,
+    name: "Base",
+    urlName: "base",
+    isTestnet: false,
+    explorerUrlPattern: "https://basescan.org/address/{address}",
+    currency: "ETH",
+  },
 ];
 
 export default networks;
