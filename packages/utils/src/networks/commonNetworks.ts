@@ -90,6 +90,22 @@ let networks: Array<INetworkModel> = [
     explorerUrlPattern: "https://basescan.org/address/{address}",
     currency: "ETH",
   },
+  {
+    chainId: 361,
+    name: "Theta Mainnet",
+    urlName: "theta",
+    isTestnet: false,
+    explorerUrlPattern: "",
+    currency: "TFUEL",
+  },
+  {
+    chainId: 365,
+    name: "Theta Testnet",
+    urlName: "theta-testnet",
+    isTestnet: true,
+    explorerUrlPattern: "",
+    currency: "TFUEL",
+  },
 ];
 
 export default networks;
