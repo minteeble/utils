@@ -75,11 +75,11 @@ let networks: Array<INetworkModel> = [
     currency: "ETH",
   },
   {
-    chainId: 84531,
-    name: "Base Goerli",
-    urlName: "base-goerli",
+    chainId: 84532,
+    name: "Base Sepolia",
+    urlName: "base-sepolia",
     isTestnet: true,
-    explorerUrlPattern: "https://goerli.basescan.orgy/address/{address}",
+    explorerUrlPattern: "https://sepolia.basescan.org/address/{address}",
     currency: "ETH",
   },
   {
