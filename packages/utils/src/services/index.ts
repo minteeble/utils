@@ -14,3 +14,4 @@ export * from "./Shortener";
 export * from "./SmartContract";
 export * from "./Users";
 export * from "./WebhookListener";
+export * from "./SharedResources";
